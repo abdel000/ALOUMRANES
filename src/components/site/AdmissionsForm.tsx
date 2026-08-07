@@ -28,7 +28,7 @@ const requests = [
 ];
 
 const fieldClass =
-  "mt-2 w-full border border-input bg-card px-4 py-3.5 text-sm text-foreground transition-colors placeholder:text-muted-foreground/70 focus:border-navy focus:outline-none";
+  "mt-2 w-full border border-input bg-card px-4 py-3.5 text-sm text-foreground transition-colors placeholder:text-muted-foreground focus:border-navy focus:outline-none";
 const selectClass = `${fieldClass} appearance-none pr-10`;
 
 function SelectField({
@@ -202,7 +202,7 @@ export function AdmissionsForm({
           className="text-xs tracking-[0.14em] uppercase text-muted-foreground"
         >
           Niveau / classe actuelle{" "}
-          <span className="normal-case text-muted-foreground/60">(facultatif)</span>
+          <span className="normal-case text-muted-foreground">(facultatif)</span>
         </label>
         <input
           id="current_grade"
@@ -228,7 +228,7 @@ export function AdmissionsForm({
 
       <div className="sm:col-span-2">
         <label htmlFor="message" className="text-xs tracking-[0.14em] uppercase text-muted-foreground">
-          Message <span className="normal-case text-muted-foreground/60">(facultatif)</span>
+          Message <span className="normal-case text-muted-foreground">(facultatif)</span>
         </label>
         <textarea id="message" name="message" rows={3} className={fieldClass} />
       </div>
