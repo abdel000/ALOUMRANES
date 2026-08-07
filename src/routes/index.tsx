@@ -55,7 +55,7 @@ function Home() {
 
         <div className="relative mx-auto flex min-h-[92dvh] max-w-[88rem] flex-col justify-end px-5 pt-32 pb-16 sm:px-8 lg:pb-24">
           <div className="max-w-3xl text-navy-foreground">
-            <span className="inline-flex items-center gap-2 border border-gold/60 px-4 py-2 text-[0.625rem] tracking-[0.2em] uppercase text-gold">
+            <span className="inline-flex items-center gap-2 border border-gold/70 bg-ink/50 px-4 py-2 text-[0.625rem] tracking-[0.2em] uppercase text-gold backdrop-blur-sm">
               Inscriptions {SITE.schoolYear} ouvertes
             </span>
             <h1 className="mt-8 text-4xl leading-[1.06] sm:text-5xl lg:text-[4.25rem]">
