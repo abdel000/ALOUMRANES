@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { toast } from "sonner";
 import { z } from "zod";
+import { ChevronDown } from "lucide-react";
 import { SITE, getUtm, track } from "@/lib/site";
 import { CtaButton } from "./Cta";
 
@@ -11,13 +12,10 @@ const schema = z.object({
     .trim()
     .min(8, "Merci d'indiquer un numéro de téléphone valide.")
     .max(25),
-  email: z.string().trim().email("Adresse email invalide.").max(255),
   student_level: z.string().min(1, "Merci de choisir un niveau."),
   current_grade: z.string().trim().max(80).optional().or(z.literal("")),
-  school_year: z.string(),
   request_type: z.string().min(1, "Merci de préciser votre demande."),
   message: z.string().trim().max(1000).optional().or(z.literal("")),
-  consent: z.literal(true, { message: "Merci d'accepter l'utilisation de vos données." }),
 });
 
 const levels = ["Maternelle", "Primaire", "Collège", "Lycée"];
@@ -31,6 +29,36 @@ const requests = [
 
 const fieldClass =
   "mt-2 w-full border border-input bg-card px-4 py-3.5 text-sm text-foreground transition-colors placeholder:text-muted-foreground/70 focus:border-navy focus:outline-none";
+const selectClass = `${fieldClass} appearance-none pr-10`;
+
+function SelectField({
+  id,
+  label,
+  error,
+  children,
+  ...props
+}: React.SelectHTMLAttributes<HTMLSelectElement> & {
+  label: string;
+  error?: string;
+}) {
+  return (
+    <div>
+      <label htmlFor={id} className="text-xs tracking-[0.14em] uppercase text-muted-foreground">
+        {label}
+      </label>
+      <div className="relative">
+        <select id={id} className={selectClass} aria-invalid={!!error} {...props}>
+          {children}
+        </select>
+        <ChevronDown
+          className="pointer-events-none absolute top-1/2 right-4 size-4 -translate-y-1/2 text-muted-foreground"
+          aria-hidden="true"
+        />
+      </div>
+      {error ? <p className="mt-2 text-xs text-destructive">{error}</p> : null}
+    </div>
+  );
+}
 
 export function AdmissionsForm({
   defaultRequest = "Demander des informations",
@@ -48,13 +76,10 @@ export function AdmissionsForm({
     const raw = {
       name: String(fd.get("name") ?? ""),
       phone: String(fd.get("phone") ?? ""),
-      email: String(fd.get("email") ?? ""),
       student_level: String(fd.get("student_level") ?? ""),
       current_grade: String(fd.get("current_grade") ?? ""),
-      school_year: String(fd.get("school_year") ?? SITE.schoolYear),
       request_type: String(fd.get("request_type") ?? ""),
       message: String(fd.get("message") ?? ""),
-      consent: fd.get("consent") === "on",
     };
 
     const parsed = schema.safeParse(raw);
@@ -75,6 +100,7 @@ export function AdmissionsForm({
     /** Objet lead envoyé vers la feuille Google Sheets (via webhook Apps Script). */
     const lead = {
       ...parsed.data,
+      school_year: SITE.schoolYear,
       source,
       ...getUtm(),
       created_at: new Date().toISOString(),
@@ -95,13 +121,11 @@ export function AdmissionsForm({
           body: new URLSearchParams({
             name: lead.name,
             phone: lead.phone,
-            email: lead.email,
             student_level: lead.student_level,
             current_grade: lead.current_grade ?? "",
             school_year: lead.school_year,
             request_type: lead.request_type,
             message: lead.message ?? "",
-            consent: String(lead.consent),
             source: lead.source,
             utm_source: lead.utm_source,
             utm_medium: lead.utm_medium,
@@ -146,58 +170,39 @@ export function AdmissionsForm({
           id="phone"
           name="phone"
           type="tel"
+          inputMode="tel"
           autoComplete="tel"
-          placeholder="Numéro de téléphone"
+          placeholder="06 XX XX XX XX"
           aria-invalid={!!errors["phone"]}
           className={fieldClass}
         />
         {errors["phone"] ? <p className="mt-2 text-xs text-destructive">{errors["phone"]}</p> : null}
       </div>
 
-      <div>
-        <label htmlFor="email" className="text-xs tracking-[0.14em] uppercase text-muted-foreground">
-          Email
-        </label>
-        <input
-          id="email"
-          name="email"
-          type="email"
-          autoComplete="email"
-          placeholder="Adresse email"
-          aria-invalid={!!errors["email"]}
-          className={fieldClass}
-        />
-        {errors["email"] ? <p className="mt-2 text-xs text-destructive">{errors["email"]}</p> : null}
-      </div>
-
-      <div>
-        <label
-          htmlFor="student_level"
-          className="text-xs tracking-[0.14em] uppercase text-muted-foreground"
-        >
-          Niveau recherché
-        </label>
-        <select id="student_level" name="student_level" defaultValue="" className={fieldClass}>
-          <option value="" disabled>
-            Choisir un niveau
+      <SelectField
+        id="student_level"
+        name="student_level"
+        label="Niveau recherché"
+        defaultValue=""
+        error={errors["student_level"]}
+      >
+        <option value="" disabled>
+          Choisir un niveau
+        </option>
+        {levels.map((l) => (
+          <option key={l} value={l}>
+            {l}
           </option>
-          {levels.map((l) => (
-            <option key={l} value={l}>
-              {l}
-            </option>
-          ))}
-        </select>
-        {errors["student_level"] ? (
-          <p className="mt-2 text-xs text-destructive">{errors["student_level"]}</p>
-        ) : null}
-      </div>
+        ))}
+      </SelectField>
 
       <div>
         <label
           htmlFor="current_grade"
           className="text-xs tracking-[0.14em] uppercase text-muted-foreground"
         >
-          Niveau / classe actuelle
+          Niveau / classe actuelle{" "}
+          <span className="normal-case text-muted-foreground/60">(facultatif)</span>
         </label>
         <input
           id="current_grade"
@@ -207,64 +212,25 @@ export function AdmissionsForm({
         />
       </div>
 
-      <div>
-        <label
-          htmlFor="school_year"
-          className="text-xs tracking-[0.14em] uppercase text-muted-foreground"
-        >
-          Pour quelle rentrée ?
-        </label>
-        <select id="school_year" name="school_year" defaultValue={SITE.schoolYear} className={fieldClass}>
-          <option value={SITE.schoolYear}>{SITE.schoolYear}</option>
-        </select>
-      </div>
-
-      <div>
-        <label
-          htmlFor="request_type"
-          className="text-xs tracking-[0.14em] uppercase text-muted-foreground"
-        >
-          Votre demande
-        </label>
-        <select
-          id="request_type"
-          name="request_type"
-          defaultValue={defaultRequest}
-          className={fieldClass}
-        >
-          {requests.map((r) => (
-            <option key={r} value={r}>
-              {r}
-            </option>
-          ))}
-        </select>
-        {errors["request_type"] ? (
-          <p className="mt-2 text-xs text-destructive">{errors["request_type"]}</p>
-        ) : null}
-      </div>
+      <SelectField
+        id="request_type"
+        name="request_type"
+        label="Votre demande"
+        defaultValue={defaultRequest}
+        error={errors["request_type"]}
+      >
+        {requests.map((r) => (
+          <option key={r} value={r}>
+            {r}
+          </option>
+        ))}
+      </SelectField>
 
       <div className="sm:col-span-2">
         <label htmlFor="message" className="text-xs tracking-[0.14em] uppercase text-muted-foreground">
-          Message (facultatif)
+          Message <span className="normal-case text-muted-foreground/60">(facultatif)</span>
         </label>
-        <textarea id="message" name="message" rows={4} className={fieldClass} />
-      </div>
-
-      <div className="sm:col-span-2">
-        <label htmlFor="consent" className="flex items-start gap-3 text-sm text-muted-foreground">
-          <input
-            id="consent"
-            name="consent"
-            type="checkbox"
-            className="mt-1 size-4 accent-[var(--navy)]"
-          />
-          <span>
-            J'accepte que mes données soient utilisées afin d'être recontacté concernant ma demande.
-          </span>
-        </label>
-        {errors["consent"] ? (
-          <p className="mt-2 text-xs text-destructive">{errors["consent"]}</p>
-        ) : null}
+        <textarea id="message" name="message" rows={3} className={fieldClass} />
       </div>
 
       <div className="flex flex-col gap-3 sm:col-span-2 sm:flex-row sm:items-center">
