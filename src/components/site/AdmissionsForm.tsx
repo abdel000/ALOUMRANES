@@ -72,7 +72,7 @@ export function AdmissionsForm({
     setErrors({});
     setSending(true);
 
-    /** Objet lead prêt pour un CRM / Google Sheets / webhook. */
+    /** Objet lead envoyé vers la feuille Google Sheets (via webhook Apps Script). */
     const lead = {
       ...parsed.data,
       source,
@@ -85,11 +85,40 @@ export function AdmissionsForm({
     track("admission_inquiry", { student_level: lead.student_level });
     if (lead.request_type === "Planifier une visite") track("visit_request", {});
 
-    setTimeout(() => {
-      setSending(false);
-      e.currentTarget?.reset?.();
-      toast.success("Votre demande a bien été enregistrée. Nous vous recontactons rapidement.");
-    }, 400);
+    const formEl = e.currentTarget;
+    const webhookUrl = import.meta.env.VITE_LEADS_WEBHOOK_URL as string | undefined;
+
+    const submitted = webhookUrl
+      ? fetch(webhookUrl, {
+          method: "POST",
+          mode: "no-cors",
+          body: new URLSearchParams({
+            name: lead.name,
+            phone: lead.phone,
+            email: lead.email,
+            student_level: lead.student_level,
+            current_grade: lead.current_grade ?? "",
+            school_year: lead.school_year,
+            request_type: lead.request_type,
+            message: lead.message ?? "",
+            consent: String(lead.consent),
+            source: lead.source,
+            utm_source: lead.utm_source,
+            utm_medium: lead.utm_medium,
+            utm_campaign: lead.utm_campaign,
+          }),
+        })
+      : Promise.resolve();
+
+    submitted
+      .then(() => {
+        formEl.reset();
+        toast.success("Votre demande a bien été enregistrée. Nous vous recontactons rapidement.");
+      })
+      .catch(() => {
+        toast.error("Envoi impossible pour le moment. Merci de nous contacter par téléphone.");
+      })
+      .finally(() => setSending(false));
   };
 
   return (
