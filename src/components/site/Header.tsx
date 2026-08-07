@@ -15,7 +15,7 @@ function Wordmark({ inverse = false }: { inverse?: boolean }) {
         width={96}
         height={96}
         className={cn(
-          "size-14 shrink-0 object-contain sm:size-16 lg:size-20",
+          "size-16 shrink-0 object-contain sm:size-20 lg:size-24",
           inverse && "rounded-md bg-navy-foreground/95 p-1",
         )}
       />
@@ -79,7 +79,7 @@ export function Header() {
       <div
         className={cn(
           "mx-auto flex max-w-[88rem] items-center justify-between gap-6 px-5 transition-all duration-500 sm:px-8",
-          scrolled ? "h-20" : "h-24 lg:h-28",
+          scrolled ? "h-24" : "h-28 lg:h-32",
         )}
       >
         <Wordmark />
