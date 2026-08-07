@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { toast } from "sonner";
 import { z } from "zod";
-import { ChevronDown } from "lucide-react";
+import { ArrowRight, ChevronDown, Clock3, ShieldCheck, Star } from "lucide-react";
 import { SITE, getUtm, track } from "@/lib/site";
 import { CtaButton } from "./Cta";
 
@@ -146,7 +146,16 @@ export function AdmissionsForm({
   };
 
   return (
-    <form onSubmit={onSubmit} noValidate className="grid gap-6 sm:grid-cols-2">
+    <>
+      <div className="mb-6 flex items-center gap-2 text-xs tracking-[0.1em] text-muted-foreground">
+        <span className="inline-flex items-center gap-1 font-medium text-navy">
+          <Star className="size-3.5 fill-gold text-gold" aria-hidden="true" />
+          {SITE.rating}/5
+        </span>
+        <span>· {SITE.reviewCount} avis Google · Réponse sous 24h</span>
+      </div>
+
+      <form onSubmit={onSubmit} noValidate className="grid gap-6 sm:grid-cols-2">
       <div className="sm:col-span-2">
         <label htmlFor="name" className="text-xs tracking-[0.14em] uppercase text-muted-foreground">
           Parent
@@ -233,12 +242,34 @@ export function AdmissionsForm({
         <textarea id="message" name="message" rows={3} className={fieldClass} />
       </div>
 
-      <div className="flex flex-col gap-3 sm:col-span-2 sm:flex-row sm:items-center">
-        <CtaButton type="submit" variant="gold" disabled={sending}>
-          {sending ? "Envoi…" : "Demander des informations"}
+      <div className="flex flex-col gap-4 sm:col-span-2">
+        <CtaButton
+          type="submit"
+          variant="gold"
+          disabled={sending}
+          className="w-full justify-center py-4 text-sm sm:w-auto sm:px-8"
+        >
+          {sending ? (
+            "Envoi…"
+          ) : (
+            <>
+              Recevoir une réponse sous 24h
+              <ArrowRight className="size-4" aria-hidden="true" />
+            </>
+          )}
         </CtaButton>
-        <p className="text-xs text-muted-foreground">Vos informations restent confidentielles.</p>
+        <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-muted-foreground">
+          <span className="inline-flex items-center gap-1.5">
+            <ShieldCheck className="size-3.5 text-gold" aria-hidden="true" />
+            Données confidentielles
+          </span>
+          <span className="inline-flex items-center gap-1.5">
+            <Clock3 className="size-3.5 text-gold" aria-hidden="true" />
+            Sans engagement
+          </span>
+        </div>
       </div>
-    </form>
+      </form>
+    </>
   );
 }
