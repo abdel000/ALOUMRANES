@@ -10,9 +10,9 @@ export const SITE = {
   whatsapp: "",
   /** TODO: adresse email à confirmer par l'établissement. */
   email: "",
-  mapsLink: "https://maps.app.goo.gl/33zBABjmk8LFuBNK8",
+  mapsLink: "https://maps.app.goo.gl/B6jdh432VJTwhxBT7",
   mapsEmbed:
-    "https://www.google.com/maps?q=place_id:ChIJqZQVTd0tpg0RFfc-RBGix2s&output=embed",
+    "https://www.google.com/maps?q=33.513974,-7.650375&z=16&output=embed",
   /** TODO: liens réseaux sociaux officiels. */
   instagram: "",
   facebook: "",
