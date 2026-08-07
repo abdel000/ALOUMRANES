@@ -1,22 +1,22 @@
-import facade1 from "@/assets/gmb/gmb-01.jpg.asset.json";
-import pool1 from "@/assets/gmb/gmb-02.jpg.asset.json";
-import facade2 from "@/assets/gmb/gmb-03.jpg.asset.json";
-import atelier1 from "@/assets/gmb/gmb-04.jpg.asset.json";
-import pool2 from "@/assets/gmb/gmb-05.jpg.asset.json";
-import kids from "@/assets/gmb/gmb-06.jpg.asset.json";
-import atelier2 from "@/assets/gmb/gmb-07.jpg.asset.json";
-import courBus from "@/assets/gmb/gmb-08.jpg.asset.json";
-import library from "@/assets/gmb/gmb-09.jpg.asset.json";
-import poolStudy from "@/assets/gmb/gmb-10.jpg.asset.json";
+const facade1 = "/images/gmb-01.jpg";
+const pool1 = "/images/gmb-02.jpg";
+const facade2 = "/images/gmb-03.jpg";
+const atelier1 = "/images/gmb-04.jpg";
+const pool2 = "/images/gmb-05.jpg";
+const kids = "/images/gmb-06.jpg";
+const atelier2 = "/images/gmb-07.jpg";
+const courBus = "/images/gmb-08.jpg";
+const library = "/images/gmb-09.jpg";
+const poolStudy = "/images/gmb-10.jpg";
 
 /** Photos officielles issues de la fiche Google du Groupe Scolaire Al Oumrane. */
-const maternelle = kids.url;
-const primaire = atelier2.url;
-const college = courBus.url;
-const lycee = poolStudy.url;
-const campus = facade2.url;
-const philosophy = atelier1.url;
-const bac = library.url;
+const maternelle = kids;
+const primaire = atelier2;
+const college = courBus;
+const lycee = poolStudy;
+const campus = facade2;
+const philosophy = atelier1;
+const bac = library;
 
 
 /**
@@ -248,16 +248,16 @@ export const NEWS: NewsItem[] = [
 ];
 
 export const GALLERY = [
-  { src: facade2.url, alt: "Façade du Groupe Scolaire Al Oumrane à Sidi Maârouf, Casablanca", caption: "Notre établissement", category: "Campus" },
-  { src: atelier1.url, alt: "Ateliers de maternelle encadrés par les enseignantes dans la cour", caption: "Ateliers de maternelle", category: "Maternelle" },
-  { src: pool1.url, alt: "Élèves en cours de natation dans la piscine de l'école", caption: "Cours de natation", category: "Sport" },
-  { src: kids.url, alt: "Jeunes élèves de maternelle sur l'aire de jeux", caption: "Aire de jeux", category: "Maternelle" },
-  { src: library.url, alt: "Bibliothèque de l'école : rayons anglais, dictionnaires et bandes dessinées", caption: "Bibliothèque", category: "Ressources" },
-  { src: courBus.url, alt: "Cour de récréation et bus de transport scolaire de l'établissement", caption: "Cour & transport scolaire", category: "Campus" },
-  { src: atelier2.url, alt: "Travail en petits groupes en classe de maternelle", caption: "Travail en petits groupes", category: "Pédagogie" },
-  { src: poolStudy.url, alt: "Élèves travaillant en plein air au bord de la piscine", caption: "Activités en plein air", category: "Vie scolaire" },
-  { src: pool2.url, alt: "Piscine couverte de l'école sous pergola", caption: "Espace piscine", category: "Sport" },
-  { src: facade1.url, alt: "Entrée principale du Groupe Scolaire Al Oumrane", caption: "Entrée principale", category: "Campus" },
+  { src: facade2, alt: "Façade du Groupe Scolaire Al Oumrane à Sidi Maârouf, Casablanca", caption: "Notre établissement", category: "Campus" },
+  { src: atelier1, alt: "Ateliers de maternelle encadrés par les enseignantes dans la cour", caption: "Ateliers de maternelle", category: "Maternelle" },
+  { src: pool1, alt: "Élèves en cours de natation dans la piscine de l'école", caption: "Cours de natation", category: "Sport" },
+  { src: kids, alt: "Jeunes élèves de maternelle sur l'aire de jeux", caption: "Aire de jeux", category: "Maternelle" },
+  { src: library, alt: "Bibliothèque de l'école : rayons anglais, dictionnaires et bandes dessinées", caption: "Bibliothèque", category: "Ressources" },
+  { src: courBus, alt: "Cour de récréation et bus de transport scolaire de l'établissement", caption: "Cour & transport scolaire", category: "Campus" },
+  { src: atelier2, alt: "Travail en petits groupes en classe de maternelle", caption: "Travail en petits groupes", category: "Pédagogie" },
+  { src: poolStudy, alt: "Élèves travaillant en plein air au bord de la piscine", caption: "Activités en plein air", category: "Vie scolaire" },
+  { src: pool2, alt: "Piscine couverte de l'école sous pergola", caption: "Espace piscine", category: "Sport" },
+  { src: facade1, alt: "Entrée principale du Groupe Scolaire Al Oumrane", caption: "Entrée principale", category: "Campus" },
 ];
 
 

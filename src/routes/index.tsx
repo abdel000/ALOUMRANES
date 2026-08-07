@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import * as Icons from "lucide-react";
-import heroAsset from "@/assets/gmb/gmb-03.jpg.asset.json";
+const heroImage = "/images/gmb-03.jpg";
 import { SITE, track } from "@/lib/site";
 import { CYCLES, IMAGES, SUPPORT_STEPS, TESTIMONIALS, TRUST_POINTS, WHY } from "@/content/school";
 import { CtaLink, TextLink } from "@/components/site/Cta";
@@ -42,7 +42,7 @@ function Home() {
       <section className="relative">
         <div className="absolute inset-0">
           <img
-            src={heroAsset.url}
+            src={heroImage}
             alt="Façade du Groupe Scolaire Al Oumrane à Sidi Maârouf, Casablanca"
 
             width={1920}

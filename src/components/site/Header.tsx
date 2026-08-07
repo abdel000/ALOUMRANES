@@ -4,13 +4,13 @@ import { Menu, X, Phone } from "lucide-react";
 import { NAV, LANGUAGES, SITE, track } from "@/lib/site";
 import { cn } from "@/lib/utils";
 import { CtaLink } from "./Cta";
-import logo from "@/assets/logo-al-oumrane.png.asset.json";
+const logo = "/images/logo-al-oumrane.png";
 
 function Wordmark({ inverse = false }: { inverse?: boolean }) {
   return (
     <Link to="/" className="flex items-center gap-3" aria-label={`${SITE.name} — accueil`}>
       <img
-        src={logo.url}
+        src={logo}
         alt={`Logo ${SITE.name}`}
         width={72}
         height={72}

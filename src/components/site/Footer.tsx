@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Instagram, Facebook, MapPin, Phone, MessageCircle } from "lucide-react";
 import { SITE, whatsappHref, track } from "@/lib/site";
 import { CtaLink } from "./Cta";
-import logo from "@/assets/logo-al-oumrane.png.asset.json";
+const logo = "/images/logo-al-oumrane.png";
 
 const navLinks = [
   { label: "Accueil", to: "/" },
@@ -20,7 +20,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-[88rem] gap-12 px-5 py-20 sm:px-8 lg:grid-cols-4">
         <div className="lg:pr-8">
           <img
-            src={logo.url}
+            src={logo}
             alt={`Logo ${SITE.name}`}
             width={96}
             height={96}
