@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+# TODO: ajouter la directive Sitemap une fois le domaine défini.
