@@ -8,36 +8,17 @@ const logo = "/images/logo-al-oumrane.png";
 
 function Wordmark({ inverse = false }: { inverse?: boolean }) {
   return (
-    <Link to="/" className="flex items-center gap-3" aria-label={`${SITE.name} — accueil`}>
+    <Link to="/" className="flex items-center" aria-label={`${SITE.name} — accueil`}>
       <img
         src={logo}
         alt={`Logo ${SITE.name}`}
-        width={72}
-        height={72}
+        width={96}
+        height={96}
         className={cn(
-          "size-10 shrink-0 object-contain sm:size-14 lg:size-16",
+          "size-14 shrink-0 object-contain sm:size-16 lg:size-20",
           inverse && "rounded-md bg-navy-foreground/95 p-1",
         )}
       />
-      <span className="leading-tight">
-        <span
-          className={cn(
-            "block font-display text-[0.8rem] whitespace-nowrap sm:text-[0.9rem] lg:text-[1.05rem]",
-            inverse ? "text-navy-foreground" : "text-navy",
-          )}
-        >
-          <span className="sm:hidden">{SITE.shortName}</span>
-          <span className="hidden sm:inline">Groupe Scolaire Al Oumrane</span>
-        </span>
-        <span
-          className={cn(
-            "hidden text-[0.625rem] tracking-[0.2em] uppercase sm:block",
-            inverse ? "text-navy-foreground/60" : "text-muted-foreground",
-          )}
-        >
-          {SITE.district} · {SITE.city}
-        </span>
-      </span>
     </Link>
   );
 }
