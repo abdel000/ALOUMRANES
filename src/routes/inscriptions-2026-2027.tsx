@@ -102,7 +102,7 @@ function InscriptionsLanding() {
           alt="Bâtiment du Groupe Scolaire Al Oumrane à Sidi Maârouf, Casablanca"
           className="absolute inset-0 size-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0e7a80]/20 via-[#0e7a80]/15 to-[#0e7a80]/65" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/15 to-black/65" />
 
         <div className="relative mx-auto max-w-4xl px-5 py-14 text-center sm:px-8 sm:py-20">
           <span className="inline-flex items-center gap-2 rounded-full bg-[#12213c]/60 px-4 py-2 text-xs font-semibold tracking-wide uppercase backdrop-blur-sm">
@@ -127,7 +127,7 @@ function InscriptionsLanding() {
             <p className="text-sm font-semibold tracking-wide uppercase">
               Sur les frais d'inscription
             </p>
-            <p className="mt-1 text-6xl font-extrabold sm:text-7xl">-25%</p>
+            <p className="mt-1 text-4xl font-extrabold sm:text-5xl">-25%</p>
             <p className="mt-2 text-sm font-semibold">
               Pour les 50 premières nouvelles inscriptions
             </p>
@@ -160,12 +160,11 @@ function InscriptionsLanding() {
               <ArrowRight className="size-4" aria-hidden="true" />
             </a>
             <a
-              href={SITE.phoneHref}
-              onClick={() => track("phone_click", { location: "landing_promo_hero" })}
+              href="#inscription-form"
               className="inline-flex items-center gap-2 rounded-full border-2 border-white px-8 py-4 text-sm font-bold tracking-wide uppercase text-white"
             >
-              <Phone className="size-4" aria-hidden="true" />
-              {SITE.phone}
+              Réserver ma visite
+              <ArrowRight className="size-4" aria-hidden="true" />
             </a>
           </div>
         </div>
@@ -277,7 +276,7 @@ function InscriptionsLanding() {
               defaultRequest="Demander les conditions d'inscription"
               redirectTo="/inscriptions-2026-2027-merci"
               showCurrentGrade={false}
-              submitLabel="Inscrire mon enfant à la meilleure école de Sidi Maârouf"
+              submitLabel="Réserver ma visite à l'école"
             />
           </div>
         </div>
