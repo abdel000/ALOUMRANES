@@ -70,6 +70,7 @@ export function AdmissionsForm({
   source = "site",
   redirectTo,
   showCurrentGrade = true,
+  submitLabel = "Recevoir une réponse sous 24h",
 }: {
   defaultRequest?: string;
   source?: string;
@@ -77,6 +78,8 @@ export function AdmissionsForm({
   redirectTo?: string;
   /** Set to false to hide the optional "current grade" field (shorter form for high-friction contexts like ad landing pages). */
   showCurrentGrade?: boolean;
+  /** Submit button copy. */
+  submitLabel?: string;
 }) {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [sending, setSending] = useState(false);
@@ -272,7 +275,7 @@ export function AdmissionsForm({
             "Envoi…"
           ) : (
             <>
-              Recevoir une réponse sous 24h
+              {submitLabel}
               <ArrowRight className="size-4" aria-hidden="true" />
             </>
           )}

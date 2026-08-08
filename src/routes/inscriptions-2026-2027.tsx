@@ -271,6 +271,7 @@ function InscriptionsLanding() {
               defaultRequest="Demander les conditions d'inscription"
               redirectTo="/inscriptions-2026-2027-merci"
               showCurrentGrade={false}
+              submitLabel="Inscrire mon enfant à la meilleure école de Sidi Maârouf"
             />
           </div>
         </div>
