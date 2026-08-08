@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import {
   Star,
   Phone,
-  MessageCircle,
   GraduationCap,
   Users,
   Globe,
@@ -12,7 +11,7 @@ import {
   ArrowRight,
   MapPin,
 } from "lucide-react";
-import { SITE, whatsappHref, track } from "@/lib/site";
+import { SITE, track } from "@/lib/site";
 import { IMAGES } from "@/content/school";
 import { AdmissionsForm } from "@/components/site/AdmissionsForm";
 
@@ -294,22 +293,13 @@ function InscriptionsLanding() {
       </footer>
 
       {/* STICKY MOBILE CTA */}
-      <div className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-2 gap-px bg-black/10 lg:hidden">
+      <div className="fixed inset-x-0 bottom-0 z-40 lg:hidden">
         <a
-          href={SITE.phoneHref}
-          onClick={() => track("phone_click", { location: "landing_promo_sticky" })}
-          className="flex items-center justify-center gap-2 bg-[#e5342c] py-4 text-sm font-bold text-white"
+          href="#inscription-form"
+          className="flex items-center justify-center gap-2 bg-[#e5342c] py-4 text-sm font-bold tracking-wide uppercase text-white"
         >
-          <Phone className="size-4" aria-hidden="true" />
-          Appeler
-        </a>
-        <a
-          href={whatsappHref("Bonjour, je souhaite profiter de l'offre inscriptions 2026-2027.")}
-          onClick={() => track("whatsapp_click", { location: "landing_promo_sticky" })}
-          className="flex items-center justify-center gap-2 bg-[#0e7a80] py-4 text-sm font-bold text-white"
-        >
-          <MessageCircle className="size-4" aria-hidden="true" />
-          WhatsApp
+          Inscrire mon enfant
+          <ArrowRight className="size-4" aria-hidden="true" />
         </a>
       </div>
     </div>
