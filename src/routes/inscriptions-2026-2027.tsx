@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import {
   Star,
-  Phone,
   GraduationCap,
   Users,
   Globe,
@@ -11,7 +10,7 @@ import {
   ArrowRight,
   MapPin,
 } from "lucide-react";
-import { SITE, track } from "@/lib/site";
+import { SITE } from "@/lib/site";
 import { IMAGES } from "@/content/school";
 import { AdmissionsForm } from "@/components/site/AdmissionsForm";
 
@@ -77,20 +76,18 @@ const FEATURES = [
 function InscriptionsLanding() {
   return (
     <div className="min-h-dvh bg-white pb-20 lg:pb-0">
-      {/* TOP BAR — logo + phone only, no nav (standalone ad landing page) */}
+      {/* TOP BAR — logo + CTA only, no nav (standalone ad landing page) */}
       <header className="sticky top-0 z-40 flex items-center justify-between border-b border-black/5 bg-white px-5 py-2 sm:px-8">
         <img
           src={logo}
           alt={`Logo ${SITE.name}`}
-          className="h-16 w-auto object-contain sm:h-20"
+          className="h-20 w-auto object-contain sm:h-24"
         />
         <a
-          href={SITE.phoneHref}
-          onClick={() => track("phone_click", { location: "landing_promo_topbar" })}
-          className="inline-flex items-center gap-2 rounded-full bg-[#e5342c] px-4 py-2.5 text-sm font-semibold text-white sm:px-5"
+          href="#inscription-form"
+          className="inline-flex items-center gap-2 rounded-full bg-[#e5342c] px-4 py-2.5 text-sm font-bold tracking-wide uppercase text-white sm:px-6"
         >
-          <Phone className="size-4" aria-hidden="true" />
-          {SITE.phone}
+          Inscrire mon enfant
         </a>
       </header>
 
@@ -109,15 +106,11 @@ function InscriptionsLanding() {
             École à {SITE.district}, {SITE.city}
           </span>
 
-          <h1 className="mt-6 text-5xl leading-[1.02] font-extrabold tracking-tight [text-shadow:0_2px_4px_rgba(0,0,0,0.85),0_8px_28px_rgba(0,0,0,0.6)] sm:text-7xl">
-            Inscriptions
+          <h1 className="mx-auto mt-6 inline-block rounded-3xl bg-white px-8 py-5 text-5xl leading-[1.02] font-extrabold tracking-tight shadow-2xl sm:px-12 sm:py-7 sm:text-7xl">
+            <span className="text-navy">Inscriptions</span>
             <br />
-            <span className="text-[#f4c40f]">ouvertes</span>
+            <span className="text-gold">ouvertes</span>
           </h1>
-          <span
-            className="mx-auto mt-3 block h-1 w-20 rounded-full bg-[#f4c40f]"
-            aria-hidden="true"
-          />
           <p className="mt-4 inline-flex items-center gap-2 rounded-full bg-[#e5342c] px-5 py-2 text-lg font-bold sm:text-xl">
             {SITE.schoolYear}
           </p>
