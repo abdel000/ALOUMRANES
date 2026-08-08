@@ -79,11 +79,11 @@ function InscriptionsLanding() {
   return (
     <div className="min-h-dvh bg-white pb-20 lg:pb-0">
       {/* TOP BAR — logo + phone only, no nav (standalone ad landing page) */}
-      <header className="sticky top-0 z-40 flex items-center justify-between border-b border-black/5 bg-white px-5 py-3 sm:px-8">
+      <header className="sticky top-0 z-40 flex items-center justify-between border-b border-black/5 bg-white px-5 py-2 sm:px-8">
         <img
           src={logo}
           alt={`Logo ${SITE.name}`}
-          className="h-12 w-auto object-contain sm:h-14"
+          className="h-16 w-auto object-contain sm:h-20"
         />
         <a
           href={SITE.phoneHref}

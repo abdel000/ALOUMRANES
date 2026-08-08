@@ -25,7 +25,7 @@ function MerciPage() {
         <img
           src={logo}
           alt={`Logo ${SITE.name}`}
-          className="h-14 w-auto rounded-md bg-white/95 p-1 object-contain"
+          className="h-20 w-auto rounded-md bg-white/95 p-1.5 object-contain"
         />
       </header>
 
