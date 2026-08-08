@@ -4,6 +4,7 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
+  useRouterState,
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
@@ -150,8 +151,22 @@ function RootShell({ children }: { children: ReactNode }) {
   );
 }
 
+/** Routes rendered without the site header/footer/nav (standalone ad landing pages). */
+const STANDALONE_ROUTES = ["/inscriptions-2026-2027"];
+
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const standalone = STANDALONE_ROUTES.includes(pathname);
+
+  if (standalone) {
+    return (
+      <QueryClientProvider client={queryClient}>
+        <Outlet />
+        <Toaster />
+      </QueryClientProvider>
+    );
+  }
 
   return (
     <QueryClientProvider client={queryClient}>
