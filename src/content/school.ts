@@ -9,6 +9,21 @@ const courBus = "/images/gmb-08.jpg";
 const library = "/images/gmb-09.jpg";
 const poolStudy = "/images/gmb-10.jpg";
 
+const ateliersCreatifs = "/images/gallery-ateliers-creatifs.jpg";
+const jardinageArrosage = "/images/gallery-jardinage-arrosage.jpg";
+const courMaternelle = "/images/gallery-cour-maternelle.jpg";
+const tirArc1 = "/images/gallery-tir-arc-01.jpg";
+const tirArc2 = "/images/gallery-tir-arc-02.jpg";
+const sortiePoney = "/images/gallery-sortie-poney.jpg";
+const jardinagePlantation = "/images/gallery-jardinage-plantation.jpg";
+const parcoursMotricite1 = "/images/gallery-parcours-motricite-01.jpg";
+const sportFoot = "/images/gallery-sport-foot.jpg";
+const sportCollege = "/images/gallery-sport-college.jpg";
+const evenementEquipe = "/images/gallery-evenement-equipe.jpg";
+const spectacleScolaire = "/images/gallery-spectacle-scolaire.jpg";
+const jeuPedagogique = "/images/gallery-jeu-pedagogique.jpg";
+const parcoursMotricite2 = "/images/gallery-parcours-motricite-02.jpg";
+
 /** Photos officielles issues de la fiche Google du Groupe Scolaire Al Oumrane. */
 const maternelle = kids;
 const primaire = atelier2;
@@ -258,7 +273,30 @@ export const GALLERY = [
   { src: poolStudy, alt: "Élèves travaillant en plein air au bord de la piscine", caption: "Activités en plein air", category: "Vie scolaire" },
   { src: pool2, alt: "Piscine couverte de l'école sous pergola", caption: "Espace piscine", category: "Sport" },
   { src: facade1, alt: "Entrée principale du Groupe Scolaire Al Oumrane", caption: "Entrée principale", category: "Campus" },
+  { src: ateliersCreatifs, alt: "Élèves de maternelle en atelier de dessin autour d'une table hexagonale colorée", caption: "Ateliers créatifs en plein air", category: "Maternelle" },
+  { src: tirArc1, alt: "Collégienne s'entraînant au tir à l'arc lors d'une sortie pédagogique", caption: "Initiation au tir à l'arc", category: "Activités" },
+  { src: tirArc2, alt: "Élève visant une cible lors d'un atelier de tir à l'arc", caption: "Atelier tir à l'arc", category: "Activités" },
+  { src: sortiePoney, alt: "Élèves en balade à cheval et calèche lors d'une sortie pédagogique à la campagne", caption: "Sortie pédagogique à la ferme", category: "Sorties" },
+  { src: jardinageArrosage, alt: "Deux collégiennes arrosant une jeune plantation dans le jardin de l'école", caption: "Atelier jardinage", category: "Environnement" },
+  { src: jardinagePlantation, alt: "Élève plantant dans un carré potager décoré par les enfants", caption: "Potager pédagogique", category: "Environnement" },
+  { src: courMaternelle, alt: "Cour de récréation dédiée à la maternelle avec structures de jeux", category: "Maternelle", caption: "Cour de la maternelle" },
+  { src: parcoursMotricite1, alt: "Enfants en parcours de motricité avec trottinettes dans la bibliothèque", caption: "Parcours de motricité", category: "Maternelle" },
+  { src: parcoursMotricite2, alt: "Groupe d'enfants en tenue de sport participant à un parcours d'obstacles", caption: "Éveil moteur en groupe", category: "Maternelle" },
+  { src: sportFoot, alt: "Collégiens en séance de football encadrée sur le terrain de sport", caption: "Séance de football", category: "Sport" },
+  { src: sportCollege, alt: "Élèves du collège en match de handball sur le terrain de sport", caption: "Match de handball", category: "Sport" },
+  { src: jeuPedagogique, alt: "Jeu pédagogique interactif sur scène avec les élèves du collège", caption: "Jeu pédagogique sur scène", category: "Pédagogie" },
+  { src: spectacleScolaire, alt: "Élèves sur scène lors d'un spectacle devant leurs camarades", caption: "Spectacle scolaire", category: "Vie scolaire" },
+  { src: evenementEquipe, alt: "Équipe pédagogique et administrative réunie pour les 25 ans de l'établissement", caption: "25 ans du Groupe Scolaire Al Oumrane", category: "Vie scolaire" },
 ];
 
 
-export const IMAGES = { campus, philosophy, bac, maternelle, primaire, college, lycee };
+export const IMAGES = {
+  campus,
+  philosophy,
+  bac,
+  maternelle,
+  primaire,
+  college,
+  lycee,
+  activites: spectacleScolaire,
+};

@@ -30,8 +30,8 @@ function Activites() {
         eyebrow="Parascolaire"
         title="Des activités parascolaires diversifiées"
         intro="Les activités parascolaires complètent les apprentissages : elles développent les talents, la confiance en soi et le goût du travail collectif."
-        image={IMAGES.college}
-        imageAlt="Élèves participant à une activité de groupe"
+        image={IMAGES.activites}
+        imageAlt="Élèves sur scène lors d'un spectacle scolaire"
       />
 
       <section className="py-20 lg:py-28">
