@@ -102,10 +102,10 @@ function InscriptionsLanding() {
           alt="Bâtiment du Groupe Scolaire Al Oumrane à Sidi Maârouf, Casablanca"
           className="absolute inset-0 size-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0e7a80]/40 via-[#0e7a80]/35 to-[#0e7a80]/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0e7a80]/20 via-[#0e7a80]/15 to-[#0e7a80]/65" />
 
         <div className="relative mx-auto max-w-4xl px-5 py-14 text-center sm:px-8 sm:py-20">
-          <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-xs font-semibold tracking-wide uppercase backdrop-blur-sm">
+          <span className="inline-flex items-center gap-2 rounded-full bg-[#12213c]/60 px-4 py-2 text-xs font-semibold tracking-wide uppercase backdrop-blur-sm">
             <Star className="size-4 fill-[#f4c40f] text-[#f4c40f]" aria-hidden="true" />
             École à {SITE.district}, {SITE.city}
           </span>
