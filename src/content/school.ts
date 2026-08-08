@@ -8,6 +8,7 @@ const atelier2 = "/images/gmb-07.jpg";
 const courBus = "/images/gmb-08.jpg";
 const library = "/images/gmb-09.jpg";
 const poolStudy = "/images/gmb-10.jpg";
+const facadeFisheye = "/images/gmb-building-fisheye.webp";
 
 const ateliersCreatifs = "/images/gallery-ateliers-creatifs.jpg";
 const jardinageArrosage = "/images/gallery-jardinage-arrosage.jpg";
@@ -300,6 +301,7 @@ export const IMAGES = {
   lycee,
   activites: spectacleScolaire,
   philosophyHome: jardinagePlantation,
+  heroBuilding: facadeFisheye,
   ferme: sortiePoney,
   activitesParascolaires: tirArc1,
   trilingue: ateliersCreatifs,
