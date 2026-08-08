@@ -109,8 +109,8 @@ function Home() {
         <div className="mx-auto grid max-w-[88rem] gap-14 px-5 sm:px-8 lg:grid-cols-2 lg:items-center lg:gap-20">
           <Reveal className="overflow-hidden">
             <img
-              src={IMAGES.philosophy}
-              alt="Enseignante accompagnant une élève pendant un exercice en classe"
+              src={IMAGES.philosophyHome}
+              alt="Élève plantant dans le potager pédagogique de l'école"
               loading="lazy"
               width={1200}
               height={1504}
