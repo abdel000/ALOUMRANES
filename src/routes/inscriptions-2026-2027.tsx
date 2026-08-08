@@ -110,12 +110,10 @@ function InscriptionsLanding() {
             École à {SITE.district}, {SITE.city}
           </span>
 
-          <h1 className="mt-6 text-5xl leading-[1.02] font-extrabold tracking-tight [text-shadow:0_4px_24px_rgba(0,0,0,0.55)] sm:text-7xl">
+          <h1 className="mt-6 text-5xl leading-[1.02] font-extrabold tracking-tight [text-shadow:0_2px_4px_rgba(0,0,0,0.85),0_8px_28px_rgba(0,0,0,0.6)] sm:text-7xl">
             Inscriptions
             <br />
-            <span className="bg-gradient-to-r from-[#f4c40f] to-[#ffe27a] bg-clip-text text-transparent">
-              ouvertes
-            </span>
+            <span className="text-[#f4c40f]">ouvertes</span>
           </h1>
           <span
             className="mx-auto mt-3 block h-1 w-20 rounded-full bg-[#f4c40f]"
@@ -146,7 +144,7 @@ function InscriptionsLanding() {
             ))}
           </div>
 
-          <p className="mt-8 text-lg font-semibold [text-shadow:0_2px_10px_rgba(0,0,0,0.45)]">
+          <p className="mt-8 text-lg font-semibold [text-shadow:0_2px_4px_rgba(0,0,0,0.85),0_8px_20px_rgba(0,0,0,0.55)]">
             Mon école <span className="text-[#f4c40f]">trilingue</span> d'excellence
           </p>
           <p className="mt-2 text-2xl" aria-hidden="true">
