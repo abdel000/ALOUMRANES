@@ -100,9 +100,9 @@ function InscriptionsLanding() {
         <img
           src={IMAGES.campus}
           alt="Bâtiment du Groupe Scolaire Al Oumrane à Sidi Maârouf, Casablanca"
-          className="absolute inset-0 size-full object-cover opacity-20"
+          className="absolute inset-0 size-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0e7a80]/95 via-[#0e7a80]/92 to-[#0e7a80]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0e7a80]/90 via-[#0e7a80]/85 to-[#0e7a80]/97" />
 
         <div className="relative mx-auto max-w-4xl px-5 py-14 text-center sm:px-8 sm:py-20">
           <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-xs font-semibold tracking-wide uppercase backdrop-blur-sm">
@@ -165,6 +165,50 @@ function InscriptionsLanding() {
         </div>
       </section>
 
+      {/* ADVANTAGES — the three standout differentiators, with real photos */}
+      <section className="bg-[#f7f7f5] px-5 py-14 sm:px-8 sm:py-20">
+        <div className="mx-auto max-w-5xl">
+          <h2 className="text-center text-2xl font-extrabold text-[#12213c] sm:text-3xl">
+            Ce qui distingue Al Oumrane
+          </h2>
+          <div className="mt-10 grid gap-6 sm:grid-cols-3">
+            {[
+              {
+                image: IMAGES.trilingue,
+                alt: "Élèves en atelier créatif au Groupe Scolaire Al Oumrane",
+                title: "École trilingue",
+                text: "Arabe, français et anglais dès le plus jeune âge pour une vraie ouverture sur le monde.",
+              },
+              {
+                image: IMAGES.activitesParascolaires,
+                alt: "Élève s'entraînant au tir à l'arc lors d'une activité parascolaire",
+                title: "Activités parascolaires",
+                text: "Sport, tir à l'arc, arts et projets collectifs pour révéler chaque talent.",
+              },
+              {
+                image: IMAGES.ferme,
+                alt: "Élèves lors d'une sortie pédagogique à la ferme",
+                title: "Ferme pédagogique",
+                text: "Sorties à la campagne : contact avec la nature, les animaux et l'apprentissage en plein air.",
+              },
+            ].map((a) => (
+              <div key={a.title} className="overflow-hidden rounded-2xl bg-white shadow-lg">
+                <img
+                  src={a.image}
+                  alt={a.alt}
+                  loading="lazy"
+                  className="aspect-4/3 w-full object-cover"
+                />
+                <div className="p-5">
+                  <h3 className="text-base font-bold text-[#12213c]">{a.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{a.text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FEATURES */}
       <section className="bg-white px-5 py-14 sm:px-8 sm:py-20">
         <div className="mx-auto grid max-w-5xl grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 sm:gap-10">
@@ -177,6 +221,35 @@ function InscriptionsLanding() {
               <p className="mt-1 text-xs leading-snug text-muted-foreground">{f.text}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* GALLERY — real school-life photos as social proof before the form */}
+      <section className="bg-[#f7f7f5] px-5 py-14 sm:px-8 sm:py-20">
+        <div className="mx-auto max-w-5xl">
+          <h2 className="text-center text-2xl font-extrabold text-[#12213c] sm:text-3xl">
+            La vie à Al Oumrane, en images
+          </h2>
+          <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4">
+            {[
+              { src: IMAGES.gallerySport, alt: "Séance de football encadrée sur le terrain de sport" },
+              { src: IMAGES.galleryPool, alt: "Élèves en cours de natation dans la piscine de l'école" },
+              { src: IMAGES.galleryLibrary, alt: "Bibliothèque de l'école" },
+              { src: IMAGES.galleryPlayground, alt: "Aire de jeux de la maternelle" },
+              { src: IMAGES.galleryGardening, alt: "Atelier de jardinage pédagogique" },
+              { src: IMAGES.galleryGroupWork, alt: "Travail en petits groupes en classe" },
+              { src: IMAGES.galleryMotricite, alt: "Parcours de motricité pour les plus jeunes" },
+              { src: IMAGES.galleryTeam, alt: "Équipe pédagogique du Groupe Scolaire Al Oumrane" },
+            ].map((g, i) => (
+              <img
+                key={i}
+                src={g.src}
+                alt={g.alt}
+                loading="lazy"
+                className="aspect-square w-full rounded-lg object-cover"
+              />
+            ))}
+          </div>
         </div>
       </section>
 
@@ -196,6 +269,8 @@ function InscriptionsLanding() {
             <AdmissionsForm
               source="landing-promo-2026-2027"
               defaultRequest="Demander les conditions d'inscription"
+              redirectTo="/inscriptions-2026-2027-merci"
+              showCurrentGrade={false}
             />
           </div>
         </div>

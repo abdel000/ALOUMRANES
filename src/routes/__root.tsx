@@ -152,7 +152,7 @@ function RootShell({ children }: { children: ReactNode }) {
 }
 
 /** Routes rendered without the site header/footer/nav (standalone ad landing pages). */
-const STANDALONE_ROUTES = ["/inscriptions-2026-2027"];
+const STANDALONE_ROUTES = ["/inscriptions-2026-2027", "/inscriptions-2026-2027-merci"];
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();

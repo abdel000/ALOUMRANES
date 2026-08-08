@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from "@tanstack/react-router";
 import { toast } from "sonner";
 import { z } from "zod";
 import { ArrowRight, ChevronDown, Clock3, ShieldCheck, Star } from "lucide-react";
 import { SITE, getUtm, track } from "@/lib/site";
+import { cn } from "@/lib/utils";
 import { CtaButton } from "./Cta";
 
 const schema = z.object({
@@ -36,13 +38,16 @@ function SelectField({
   label,
   error,
   children,
+  wrapperClassName,
   ...props
 }: React.SelectHTMLAttributes<HTMLSelectElement> & {
   label: string;
   error?: string;
+  /** Applied to the field's outer wrapper (e.g. grid col-span), not the <select> itself. */
+  wrapperClassName?: string;
 }) {
   return (
-    <div>
+    <div className={cn(wrapperClassName)}>
       <label htmlFor={id} className="text-xs tracking-[0.14em] uppercase text-muted-foreground">
         {label}
       </label>
@@ -63,12 +68,19 @@ function SelectField({
 export function AdmissionsForm({
   defaultRequest = "Demander des informations",
   source = "site",
+  redirectTo,
+  showCurrentGrade = true,
 }: {
   defaultRequest?: string;
   source?: string;
+  /** When set, navigates here on successful submit instead of resetting in place (e.g. a dedicated thank-you page for ad landing pages). */
+  redirectTo?: string;
+  /** Set to false to hide the optional "current grade" field (shorter form for high-friction contexts like ad landing pages). */
+  showCurrentGrade?: boolean;
 }) {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [sending, setSending] = useState(false);
+  const navigate = useNavigate();
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -137,7 +149,11 @@ export function AdmissionsForm({
     submitted
       .then(() => {
         formEl.reset();
-        toast.success("Votre demande a bien été enregistrée. Nous vous recontactons rapidement.");
+        if (redirectTo) {
+          navigate({ to: redirectTo });
+        } else {
+          toast.success("Votre demande a bien été enregistrée. Nous vous recontactons rapidement.");
+        }
       })
       .catch(() => {
         toast.error("Envoi impossible pour le moment. Merci de nous contacter par téléphone.");
@@ -205,21 +221,23 @@ export function AdmissionsForm({
         ))}
       </SelectField>
 
-      <div>
-        <label
-          htmlFor="current_grade"
-          className="text-xs tracking-[0.14em] uppercase text-muted-foreground"
-        >
-          Niveau / classe actuelle{" "}
-          <span className="normal-case text-muted-foreground">(facultatif)</span>
-        </label>
-        <input
-          id="current_grade"
-          name="current_grade"
-          placeholder="Ex. CE2, 5ème, Tronc commun"
-          className={fieldClass}
-        />
-      </div>
+      {showCurrentGrade ? (
+        <div>
+          <label
+            htmlFor="current_grade"
+            className="text-xs tracking-[0.14em] uppercase text-muted-foreground"
+          >
+            Niveau / classe actuelle{" "}
+            <span className="normal-case text-muted-foreground">(facultatif)</span>
+          </label>
+          <input
+            id="current_grade"
+            name="current_grade"
+            placeholder="Ex. CE2, 5ème, Tronc commun"
+            className={fieldClass}
+          />
+        </div>
+      ) : null}
 
       <SelectField
         id="request_type"
@@ -227,6 +245,7 @@ export function AdmissionsForm({
         label="Votre demande"
         defaultValue={defaultRequest}
         error={errors["request_type"]}
+        wrapperClassName={showCurrentGrade ? undefined : "sm:col-span-2"}
       >
         {requests.map((r) => (
           <option key={r} value={r}>
