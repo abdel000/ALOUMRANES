@@ -110,9 +110,17 @@ function InscriptionsLanding() {
             École à {SITE.district}, {SITE.city}
           </span>
 
-          <h1 className="mt-6 text-4xl leading-[1.05] font-extrabold [text-shadow:0_2px_12px_rgba(0,0,0,0.4)] sm:text-6xl">
-            Inscriptions ouvertes
+          <h1 className="mt-6 text-5xl leading-[1.02] font-extrabold tracking-tight [text-shadow:0_4px_24px_rgba(0,0,0,0.55)] sm:text-7xl">
+            Inscriptions
+            <br />
+            <span className="bg-gradient-to-r from-[#f4c40f] to-[#ffe27a] bg-clip-text text-transparent">
+              ouvertes
+            </span>
           </h1>
+          <span
+            className="mx-auto mt-3 block h-1 w-20 rounded-full bg-[#f4c40f]"
+            aria-hidden="true"
+          />
           <p className="mt-4 inline-flex items-center gap-2 rounded-full bg-[#e5342c] px-5 py-2 text-lg font-bold sm:text-xl">
             {SITE.schoolYear}
           </p>
