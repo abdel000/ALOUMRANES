@@ -8,8 +8,9 @@ import { MapPin, ArrowUpRight } from "lucide-react";
 
 export function AdmissionsCta() {
   return (
-    <section className="bg-navy py-24 text-navy-foreground lg:py-32">
-      <div className="mx-auto max-w-[88rem] px-5 sm:px-8">
+    <section className="relative overflow-hidden bg-navy py-24 text-navy-foreground lg:py-32">
+      <div className="bg-dot-grid absolute inset-0 text-navy-foreground/40" aria-hidden="true" />
+      <div className="relative mx-auto max-w-[88rem] px-5 sm:px-8">
         <div className="grid gap-12 lg:grid-cols-[1fr_auto] lg:items-end">
           <SectionHeading
             tone="inverse"

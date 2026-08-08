@@ -1,12 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import * as Icons from "lucide-react";
-const heroImage = "/images/gmb-03.jpg";
 import { SITE, track } from "@/lib/site";
 import { CYCLES, IMAGES, SUPPORT_STEPS, TESTIMONIALS, TRUST_POINTS, WHY } from "@/content/school";
 import { CtaLink, TextLink } from "@/components/site/Cta";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { Reveal } from "@/components/site/Reveal";
-import { CycleCards } from "@/components/site/CycleCards";
+import { CycleTabs } from "@/components/site/CycleTabs";
 import { Gallery } from "@/components/site/Gallery";
 import {
   AdmissionsCta,
@@ -14,6 +13,25 @@ import {
   LocationSection,
 } from "@/components/site/Sections";
 import { AdmissionsForm } from "@/components/site/AdmissionsForm";
+
+/** Icons for the trust strip, index-matched to TRUST_POINTS (kept local: TRUST_POINTS
+ * itself stays a plain string[] since it's reused as-is on other pages). */
+const TRUST_ICONS = [
+  Icons.GraduationCap,
+  Icons.UserRoundCheck,
+  Icons.Palette,
+  Icons.Building2,
+  Icons.Trophy,
+];
+
+function initials(name: string) {
+  return name
+    .split(" ")
+    .map((w) => w[0])
+    .join("")
+    .slice(0, 2)
+    .toUpperCase();
+}
 
 const title = "Groupe Scolaire Al Oumrane | École Privée à Sidi Maârouf, Casablanca";
 const description =
@@ -39,29 +57,20 @@ function Home() {
   return (
     <>
       {/* HERO */}
-      <section className="relative">
-        <div className="absolute inset-0">
-          <img
-            src={heroImage}
-            alt="Façade du Groupe Scolaire Al Oumrane à Sidi Maârouf, Casablanca"
-
-            width={1920}
-            height={1200}
-            className="size-full object-cover"
-          />
-          <div className="absolute inset-0 bg-ink/30" />
-          <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/25 to-ink/40" />
-        </div>
-
-        <div className="relative mx-auto flex min-h-[92dvh] max-w-[88rem] flex-col justify-end px-5 pt-32 pb-16 sm:px-8 lg:pb-24">
-          <div className="max-w-3xl text-navy-foreground">
-            <span className="inline-flex items-center gap-2 border border-gold/70 bg-ink/50 px-4 py-2 text-[0.625rem] tracking-[0.2em] uppercase text-gold backdrop-blur-sm">
+      <section className="relative overflow-hidden bg-ivory">
+        <div
+          className="bg-dot-grid absolute inset-0 -z-10 text-gold/50"
+          aria-hidden="true"
+        />
+        <div className="mx-auto grid max-w-[88rem] gap-14 px-5 pt-36 pb-20 sm:px-8 lg:grid-cols-2 lg:items-center lg:gap-16 lg:pt-44 lg:pb-28">
+          <div className="max-w-xl">
+            <span className="inline-flex items-center gap-2 border border-gold/40 bg-card px-4 py-2 text-[0.625rem] tracking-[0.2em] uppercase text-gold">
               Inscriptions {SITE.schoolYear} ouvertes
             </span>
             <h1 className="mt-8 text-4xl leading-[1.06] sm:text-5xl lg:text-[4.25rem]">
               L'excellence scolaire, dans un environnement pensé pour réussir.
             </h1>
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-navy-foreground/80 sm:text-lg">
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
               De la maternelle au lycée, Groupe Scolaire Al Oumrane accompagne chaque élève avec
               exigence, bienveillance et un suivi personnalisé.
             </p>
@@ -71,13 +80,13 @@ function Home() {
               </CtaLink>
               <CtaLink
                 to="/demande-visite"
-                variant="ghostLight"
+                variant="outline"
                 onClick={() => track("visit_request", { location: "hero" })}
               >
                 Prendre rendez-vous
               </CtaLink>
             </div>
-            <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-xs tracking-[0.18em] uppercase text-navy-foreground/70">
+            <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-xs tracking-[0.18em] uppercase text-muted-foreground">
               <span className="inline-flex items-center gap-2">
                 <Icons.MapPin className="size-3.5 text-gold" aria-hidden="true" />
                 {SITE.district} • {SITE.city}
@@ -87,35 +96,69 @@ function Home() {
                 {SITE.rating}/5 — {SITE.reviewCount} avis Google
               </span>
             </div>
+          </div>
 
+          <div className="relative">
+            <div
+              className="bg-brand-gradient absolute -inset-8 -z-10 rounded-full opacity-20 blur-3xl"
+              aria-hidden="true"
+            />
+            <div
+              className="absolute -top-6 -right-6 -z-10 size-28 rounded-full border-2 border-dashed border-gold/50"
+              aria-hidden="true"
+            />
+            <Reveal className="border-card overflow-hidden border-8 shadow-soft">
+              <img
+                src={IMAGES.heroActivity}
+                alt="Élèves en atelier créatif au Groupe Scolaire Al Oumrane"
+                width={1200}
+                height={1500}
+                className="aspect-4/5 w-full object-cover"
+              />
+            </Reveal>
           </div>
         </div>
       </section>
 
       {/* TRUST STRIP */}
-      <section className="border-b border-border bg-ivory">
-        <ul className="mx-auto grid max-w-[88rem] divide-y divide-border px-5 sm:px-8 md:grid-cols-3 md:divide-x md:divide-y-0 lg:grid-cols-5">
-          {TRUST_POINTS.map((p, i) => (
-            <Reveal as="li" key={p} delay={i * 60} className="px-0 py-6 md:px-6">
-              <span className="font-display text-xs text-gold">0{i + 1}</span>
-              <p className="mt-2 text-sm leading-snug text-foreground">{p}</p>
-            </Reveal>
-          ))}
+      <section className="border-b border-border bg-navy">
+        <ul className="mx-auto grid max-w-[88rem] divide-y divide-navy-foreground/10 px-5 sm:px-8 md:grid-cols-3 md:divide-x md:divide-y-0 lg:grid-cols-5">
+          {TRUST_POINTS.map((p, i) => {
+            const Icon = TRUST_ICONS[i] ?? Icons.Sparkles;
+            return (
+              <Reveal as="li" key={p} delay={i * 60} className="flex items-start gap-3 px-0 py-7 md:px-6">
+                <Icon className="size-5 shrink-0 text-gold" aria-hidden="true" strokeWidth={1.4} />
+                <p className="text-sm leading-snug text-navy-foreground/90">{p}</p>
+              </Reveal>
+            );
+          })}
         </ul>
       </section>
 
       {/* PHILOSOPHIE */}
       <section className="py-24 lg:py-32">
         <div className="mx-auto grid max-w-[88rem] gap-14 px-5 sm:px-8 lg:grid-cols-2 lg:items-center lg:gap-20">
-          <Reveal className="overflow-hidden">
-            <img
-              src={IMAGES.philosophy}
-              alt="Enseignante accompagnant une élève pendant un exercice en classe"
-              loading="lazy"
-              width={1200}
-              height={1504}
-              className="aspect-4/5 w-full object-cover"
-            />
+          <Reveal className="relative">
+            <div className="overflow-hidden">
+              <img
+                src={IMAGES.philosophy}
+                alt="Enseignante accompagnant une élève pendant un exercice en classe"
+                loading="lazy"
+                width={1200}
+                height={1504}
+                className="aspect-4/5 w-full object-cover"
+              />
+            </div>
+            <div className="border-card absolute -right-6 -bottom-8 w-2/5 overflow-hidden border-8 shadow-soft sm:-right-10">
+              <img
+                src={IMAGES.philosophyDetail}
+                alt="Cour de récréation dédiée à la maternelle"
+                loading="lazy"
+                width={800}
+                height={800}
+                className="aspect-square w-full object-cover"
+              />
+            </div>
           </Reveal>
           <div>
             <SectionHeading
@@ -123,6 +166,14 @@ function Home() {
               title="Bien plus qu'une école : un environnement pour grandir et réussir."
               subtitle="À Groupe Scolaire Al Oumrane, nous croyons qu'une réussite durable repose sur l'équilibre entre exigence académique, accompagnement humain et développement personnel."
             />
+            <ul className="mt-6 flex flex-wrap gap-x-8 gap-y-2 text-sm text-foreground">
+              {["Pédagogie innovante", "Accompagnement personnalisé"].map((v) => (
+                <li key={v} className="flex items-center gap-2">
+                  <Icons.CircleCheck className="size-4 text-gold" aria-hidden="true" strokeWidth={1.6} />
+                  {v}
+                </li>
+              ))}
+            </ul>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground">
               Nos équipes accompagnent les élèves dans leurs apprentissages tout en développant les
               qualités qui comptent sur le long terme.
@@ -142,6 +193,22 @@ function Home() {
             </div>
           </div>
         </div>
+
+        <div className="mx-auto mt-20 grid max-w-[88rem] grid-cols-2 gap-6 px-5 sm:px-8 lg:grid-cols-4">
+          {[
+            ["100%", "Taux de réussite au Baccalauréat"],
+            [`${SITE.rating}/5`, `Note Google (${SITE.reviewCount} avis)`],
+            ["Maternelle → Lycée", "Un parcours scolaire complet"],
+            ["Suivi individualisé", "À chaque étape du parcours"],
+          ].map(([value, label], i) => (
+            <Reveal key={value} delay={i * 70} className="border border-border bg-card p-6">
+              <p className="font-display text-2xl text-gold sm:text-3xl">{value}</p>
+              <p className="mt-2 text-xs leading-snug tracking-[0.04em] text-muted-foreground">
+                {label}
+              </p>
+            </Reveal>
+          ))}
+        </div>
       </section>
 
       {/* CYCLES */}
@@ -151,7 +218,7 @@ function Home() {
             eyebrow="Un parcours complet"
             title="Une continuité pédagogique, de la maternelle au lycée."
           />
-          <CycleCards />
+          <CycleTabs />
         </div>
       </section>
 
@@ -316,20 +383,38 @@ function Home() {
           />
           <div className="mt-14 grid gap-8 lg:grid-cols-2">
 
-            {TESTIMONIALS.map((t, i) => (
-              <Reveal
-                as="article"
-                key={i}
-                delay={i * 80}
-                className="border border-border bg-card p-8"
-              >
-                <Icons.Quote className="size-5 text-gold" aria-hidden="true" strokeWidth={1.4} />
-                <p className="mt-5 font-display text-xl leading-relaxed">{t.quote}</p>
-                <footer className="mt-6 text-xs tracking-[0.14em] uppercase text-muted-foreground">
-                  {t.parent} — {t.level}
-                </footer>
-              </Reveal>
-            ))}
+            {TESTIMONIALS.map((t, i) => {
+              const stars = Number(t.level.match(/(\d)\/5/)?.[1] ?? 5);
+              return (
+                <Reveal
+                  as="article"
+                  key={i}
+                  delay={i * 80}
+                  className="border border-border bg-card p-8 shadow-soft"
+                >
+                  <div className="flex items-center gap-0.5" aria-label={t.level}>
+                    {Array.from({ length: 5 }).map((_, s) => (
+                      <Icons.Star
+                        key={s}
+                        className={
+                          s < stars ? "size-3.5 fill-gold text-gold" : "size-3.5 text-border"
+                        }
+                        aria-hidden="true"
+                      />
+                    ))}
+                  </div>
+                  <p className="mt-5 font-display text-xl leading-relaxed">{t.quote}</p>
+                  <footer className="mt-6 flex items-center gap-3">
+                    <span className="bg-navy text-navy-foreground grid size-9 shrink-0 place-items-center rounded-full text-xs font-medium">
+                      {initials(t.parent)}
+                    </span>
+                    <span className="text-xs tracking-[0.1em] uppercase text-muted-foreground">
+                      {t.parent} — {t.level}
+                    </span>
+                  </footer>
+                </Reveal>
+              );
+            })}
           </div>
         </div>
       </section>

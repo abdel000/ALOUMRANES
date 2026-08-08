@@ -268,3 +268,12 @@
 @utility shadow-soft {
   box-shadow: var(--shadow-soft);
 }
+
+/* Dotted texture accent, echoes reference layout without new assets */
+@utility bg-dot-grid {
+  background-image: radial-gradient(
+    color-mix(in oklab, currentColor 35%, transparent) 1.5px,
+    transparent 1.5px
+  );
+  background-size: 18px 18px;
+}

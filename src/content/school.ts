@@ -299,4 +299,6 @@ export const IMAGES = {
   college,
   lycee,
   activites: spectacleScolaire,
+  heroActivity: ateliersCreatifs,
+  philosophyDetail: courMaternelle,
 };
