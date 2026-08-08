@@ -96,7 +96,7 @@ function InscriptionsLanding() {
         <img
           src={IMAGES.heroBuilding}
           alt="Bâtiment du Groupe Scolaire Al Oumrane à Sidi Maârouf, Casablanca"
-          className="absolute inset-0 size-full object-cover"
+          className="absolute inset-0 size-full object-contain sm:object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/15 to-black/65" />
 
