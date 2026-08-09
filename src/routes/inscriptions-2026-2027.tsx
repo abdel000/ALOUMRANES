@@ -168,7 +168,7 @@ function InscriptionsLanding() {
       <section className="bg-white px-5 py-14 sm:px-8 sm:py-20">
         <div className="mx-auto max-w-5xl">
           <h2 className="text-center text-2xl font-extrabold text-[#12213c] sm:text-3xl">
-            Nos dernières actualités
+            Pourquoi choisir Al Oumrane
           </h2>
           <div className="mt-10 grid gap-6 sm:grid-cols-2">
             {NEWS_HIGHLIGHTS.map((n) => (

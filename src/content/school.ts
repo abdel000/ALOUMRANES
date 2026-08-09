@@ -10,6 +10,7 @@ const library = "/images/gmb-09.jpg";
 const poolStudy = "/images/gmb-10.jpg";
 const facadeFisheye = "/images/gmb-building-fisheye.webp";
 const ecranInteractif = "/images/ecran-interactif-ecole-scaled.jpg";
+const bac100 = "/images/Bac100.png";
 
 const ateliersCreatifs = "/images/gallery-ateliers-creatifs.jpg";
 const jardinageArrosage = "/images/gallery-jardinage-arrosage.jpg";
@@ -262,7 +263,7 @@ export const NEWS: NewsItem[] = [
     category: "Réussite",
     excerpt:
       "Tous nos candidats au Baccalauréat de la session 2026 ont été reçus. Une fierté pour nos élèves, leurs familles et toute l'équipe pédagogique.",
-    image: bac,
+    image: bac100,
   },
 ];
 
