@@ -9,6 +9,7 @@ const courBus = "/images/gmb-08.jpg";
 const library = "/images/gmb-09.jpg";
 const poolStudy = "/images/gmb-10.jpg";
 const facadeFisheye = "/images/gmb-building-fisheye.webp";
+const ecranInteractif = "/images/ecran-interactif-ecole-scaled.jpg";
 
 const ateliersCreatifs = "/images/gallery-ateliers-creatifs.jpg";
 const jardinageArrosage = "/images/gallery-jardinage-arrosage.jpg";
@@ -248,17 +249,19 @@ export const NEWS: NewsItem[] = [
     image: campus,
   },
   {
-    title: "[TITRE DE L'ACTUALITÉ À AJOUTER]",
-    date: "[DATE]",
+    title: "Des écrans interactifs dans nos classes",
+    date: "2026",
     category: "Pédagogie",
-    excerpt: "[CONTENU À AJOUTER PAR L'ÉTABLISSEMENT]",
-    image: philosophy,
+    excerpt:
+      "Le Groupe Scolaire Al Oumrane s'équipe d'écrans interactifs pour des cours plus vivants, collaboratifs et adaptés aux usages numériques d'aujourd'hui.",
+    image: ecranInteractif,
   },
   {
-    title: "[TITRE DE L'ACTUALITÉ À AJOUTER]",
-    date: "[DATE]",
-    category: "Admissions",
-    excerpt: "[CONTENU À AJOUTER PAR L'ÉTABLISSEMENT]",
+    title: "100% de réussite au Baccalauréat",
+    date: "Session 2026",
+    category: "Réussite",
+    excerpt:
+      "Tous nos candidats au Baccalauréat de la session 2026 ont été reçus. Une fierté pour nos élèves, leurs familles et toute l'équipe pédagogique.",
     image: bac,
   },
 ];
