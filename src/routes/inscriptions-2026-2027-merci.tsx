@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect } from "react";
 import { CheckCircle2, Phone, MessageCircle } from "lucide-react";
 import { SITE, whatsappHref, track } from "@/lib/site";
 
@@ -19,6 +20,15 @@ export const Route = createFileRoute("/inscriptions-2026-2027-merci")({
 });
 
 function MerciPage() {
+  useEffect(() => {
+    const w = window as unknown as { gtag?: (...args: unknown[]) => void };
+    w.gtag?.("event", "conversion", {
+      send_to: "AW-10786699280/AlF9CIi7894cEJDwv5co",
+      value: 1.0,
+      currency: "MAD",
+    });
+  }, []);
+
   return (
     <div className="flex min-h-dvh flex-col bg-[#0e7a80] text-white">
       <header className="flex items-center justify-center px-5 py-6">
