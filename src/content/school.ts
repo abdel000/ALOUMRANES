@@ -302,7 +302,7 @@ export const IMAGES = {
   activites: spectacleScolaire,
   philosophyHome: jardinagePlantation,
   heroBuilding: facadeFisheye,
-  ferme: sortiePoney,
+  ferme: jardinagePlantation,
   activitesParascolaires: tirArc1,
   trilingue: ateliersCreatifs,
   galleryPool: pool1,
@@ -313,4 +313,5 @@ export const IMAGES = {
   galleryMotricite: parcoursMotricite2,
   gallerySport: sportFoot,
   galleryTeam: evenementEquipe,
+  galleryJeuPedagogique: jeuPedagogique,
 };

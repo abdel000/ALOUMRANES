@@ -182,9 +182,9 @@ function InscriptionsLanding() {
               },
               {
                 image: IMAGES.ferme,
-                alt: "Élèves lors d'une sortie pédagogique à la ferme",
+                alt: "Élève plantant dans un carré potager décoré par les enfants",
                 title: "Ferme pédagogique",
-                text: "Sorties à la campagne : contact avec la nature, les animaux et l'apprentissage en plein air.",
+                text: "Jardinage et potager : contact avec la nature et l'apprentissage en plein air.",
               },
             ].map((a) => (
               <div key={a.title} className="overflow-hidden rounded-2xl bg-white shadow-lg">
@@ -219,8 +219,46 @@ function InscriptionsLanding() {
         </div>
       </section>
 
-      {/* GALLERY — real school-life photos as social proof before the form */}
+      {/* SPECIAL — team spirit & active pedagogy highlight */}
       <section className="bg-[#f7f7f5] px-5 py-14 sm:px-8 sm:py-20">
+        <div className="mx-auto max-w-5xl">
+          <h2 className="text-center text-2xl font-extrabold text-[#12213c] sm:text-3xl">
+            Une vie scolaire riche et engagée
+          </h2>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2">
+            {[
+              {
+                image: IMAGES.galleryTeam,
+                alt: "Équipe pédagogique et administrative réunie pour les 25 ans du Groupe Scolaire Al Oumrane",
+                title: "Une équipe engagée",
+                text: "25 ans d'expérience au service de la réussite et de l'épanouissement de chaque élève.",
+              },
+              {
+                image: IMAGES.galleryJeuPedagogique,
+                alt: "Jeu pédagogique interactif sur scène avec les élèves du collège",
+                title: "Apprentissage actif",
+                text: "Des activités pédagogiques vivantes, sur scène et en classe, qui donnent envie d'apprendre.",
+              },
+            ].map((a) => (
+              <div key={a.title} className="overflow-hidden rounded-2xl bg-white shadow-lg">
+                <img
+                  src={a.image}
+                  alt={a.alt}
+                  loading="lazy"
+                  className="aspect-4/3 w-full object-cover"
+                />
+                <div className="p-5">
+                  <h3 className="text-base font-bold text-[#12213c]">{a.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{a.text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* GALLERY — real school-life photos as social proof before the form */}
+      <section className="bg-white px-5 py-14 sm:px-8 sm:py-20">
         <div className="mx-auto max-w-5xl">
           <h2 className="text-center text-2xl font-extrabold text-[#12213c] sm:text-3xl">
             La vie à Al Oumrane, en images
