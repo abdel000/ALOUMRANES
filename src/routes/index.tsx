@@ -49,16 +49,16 @@ function Home() {
             height={1200}
             className="size-full object-cover"
           />
-          <div className="absolute inset-0 bg-ink/30" />
-          <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/25 to-ink/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-ink/95 via-ink/45 to-ink/70" />
+          <div className="absolute -left-32 bottom-0 size-[36rem] rounded-full bg-gold/20 blur-3xl" aria-hidden="true" />
         </div>
 
         <div className="relative mx-auto flex min-h-[92dvh] max-w-[88rem] flex-col justify-end px-5 pt-32 pb-16 sm:px-8 lg:pb-24">
           <div className="max-w-3xl text-navy-foreground">
-            <span className="inline-flex items-center gap-2 border border-gold/70 bg-ink/50 px-4 py-2 text-[0.625rem] tracking-[0.2em] uppercase text-gold backdrop-blur-sm">
+            <span className="inline-flex items-center gap-2 bg-gold px-4 py-2 text-[0.625rem] font-bold tracking-[0.2em] uppercase text-gold-foreground shadow-lg shadow-gold/30">
               Inscriptions {SITE.schoolYear} ouvertes
             </span>
-            <h1 className="mt-8 text-4xl leading-[1.06] sm:text-5xl lg:text-[4.25rem]">
+            <h1 className="mt-8 text-4xl leading-[1.06] [text-shadow:0_4px_24px_rgba(0,0,0,0.5)] sm:text-5xl lg:text-[4.25rem]">
               L'excellence scolaire, dans un environnement pensé pour réussir.
             </h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-navy-foreground/80 sm:text-lg">

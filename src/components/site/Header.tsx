@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import { CtaLink } from "./Cta";
 const logo = "/images/logo-al-oumrane.png";
 
-function Wordmark({ inverse = false }: { inverse?: boolean }) {
+function Wordmark() {
   return (
     <Link to="/" className="flex items-center" aria-label={`${SITE.name} — accueil`}>
       <img
@@ -14,16 +14,13 @@ function Wordmark({ inverse = false }: { inverse?: boolean }) {
         alt={`Logo ${SITE.name}`}
         width={96}
         height={96}
-        className={cn(
-          "size-16 shrink-0 object-contain sm:size-20 lg:size-24",
-          inverse && "rounded-md bg-navy-foreground/95 p-1",
-        )}
+        className="size-14 shrink-0 rounded-md bg-navy-foreground/95 object-contain p-1 sm:size-16 lg:size-[4.5rem]"
       />
     </Link>
   );
 }
 
-function LangSwitcher({ inverse = false }: { inverse?: boolean }) {
+function LangSwitcher() {
   const [lang, setLang] = useState("fr");
   return (
     <div className="flex items-center gap-1" role="group" aria-label="Choix de la langue">
@@ -36,9 +33,8 @@ function LangSwitcher({ inverse = false }: { inverse?: boolean }) {
           aria-disabled={!l.enabled}
           title={l.enabled ? l.label : "Bientôt disponible"}
           className={cn(
-            "px-1.5 py-1 text-[0.6875rem] tracking-[0.14em] transition-colors",
-            inverse ? "text-navy-foreground/60" : "text-muted-foreground",
-            lang === l.code && (inverse ? "text-navy-foreground" : "text-navy"),
+            "px-1.5 py-1 text-[0.6875rem] tracking-[0.14em] text-navy-foreground/60 transition-colors",
+            lang === l.code && "text-gold",
             !l.enabled && "opacity-40",
           )}
         >
@@ -70,10 +66,10 @@ export function Header() {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-all duration-500",
+        "fixed inset-x-0 top-0 z-50 border-b backdrop-blur-xl transition-all duration-500",
         scrolled
-          ? "border-b border-border/70 bg-background/85 backdrop-blur-xl"
-          : "bg-transparent",
+          ? "border-navy-foreground/10 bg-navy/95 shadow-lg shadow-black/20"
+          : "border-navy-foreground/5 bg-navy/60",
       )}
     >
       <div
@@ -89,9 +85,8 @@ export function Header() {
             <Link
               key={item.label}
               to={item.to}
-              className="text-[0.8125rem] tracking-wide whitespace-nowrap text-foreground/80 transition-colors hover:text-navy"
-              activeProps={{ className: "text-navy" }}
-              activeOptions={{ exact: item.to === "/" }}
+              className="text-[0.8125rem] tracking-wide whitespace-nowrap text-navy-foreground/80 transition-colors hover:text-gold"
+              activeProps={{ className: "text-gold" }}
             >
               {item.label}
             </Link>
@@ -102,7 +97,7 @@ export function Header() {
           <LangSwitcher />
           <Link
             to="/demande-visite"
-            className="hidden text-[0.75rem] tracking-[0.12em] uppercase text-navy link-underline xl:inline"
+            className="hidden text-[0.75rem] tracking-[0.12em] uppercase text-navy-foreground/90 link-underline hover:text-gold xl:inline"
           >
             Demander une visite
           </Link>
@@ -119,7 +114,7 @@ export function Header() {
             type="button"
             onClick={() => setOpen(true)}
             aria-label="Ouvrir le menu"
-            className="grid size-10 place-items-center border border-navy/20 text-navy"
+            className="grid size-10 place-items-center border border-navy-foreground/25 text-navy-foreground"
           >
             <Menu className="size-5" />
           </button>
@@ -129,7 +124,7 @@ export function Header() {
       {open ? (
         <div className="fixed inset-0 z-50 flex flex-col bg-navy px-6 py-6 text-navy-foreground lg:hidden">
           <div className="flex items-center justify-between">
-            <Wordmark inverse />
+            <Wordmark />
             <button
               type="button"
               onClick={() => setOpen(false)}
@@ -162,7 +157,7 @@ export function Header() {
             >
               <Phone className="size-4" /> {SITE.phone}
             </a>
-            <LangSwitcher inverse />
+            <LangSwitcher />
           </div>
         </div>
       ) : null}

@@ -30,13 +30,11 @@ export const whatsappHref = (message = "Bonjour, je souhaite des informations su
     : SITE.phoneHref;
 
 export const NAV = [
-  { label: "Accueil", to: "/" },
   { label: "Notre École", to: "/notre-ecole" },
   { label: "Pédagogie", to: "/pedagogie" },
   { label: "Nos Cycles", to: "/maternelle" },
   { label: "Vie Scolaire", to: "/vie-scolaire" },
   { label: "Réussite", to: "/lycee" },
-  { label: "Actualités", to: "/actualites" },
   { label: "Contact", to: "/contact" },
 ] as const;
 
