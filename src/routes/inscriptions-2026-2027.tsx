@@ -115,16 +115,6 @@ function InscriptionsLanding() {
             {SITE.schoolYear}
           </p>
 
-          <div className="mx-auto mt-6 inline-flex max-w-[11rem] flex-col items-center rounded-md bg-[#12213c]/55 px-3 py-1.5 text-white shadow-xl backdrop-blur-sm">
-            <p className="text-[0.5rem] font-semibold tracking-wide uppercase text-white/80">
-              Sur les frais d'inscription
-            </p>
-            <p className="text-base font-extrabold text-[#f4c40f] sm:text-lg">-25%</p>
-            <p className="text-[0.55rem] font-semibold">
-              Pour les 50 premières nouvelles inscriptions
-            </p>
-          </div>
-
           <div className="mt-8 flex flex-wrap justify-center gap-2">
             {CYCLE_TAGS.map((c) => (
               <span
@@ -160,6 +150,14 @@ function InscriptionsLanding() {
             </a>
           </div>
         </div>
+      </section>
+
+      {/* DISCOUNT BANNER — below the hero photo, not overlapping it */}
+      <section className="bg-[#f4c40f] px-5 py-4 text-center text-[#12213c] sm:py-5">
+        <p className="mx-auto flex max-w-4xl flex-wrap items-center justify-center gap-x-3 gap-y-1 text-sm font-bold sm:text-base">
+          <span className="text-2xl font-extrabold sm:text-3xl">-25%</span>
+          <span>sur les frais d'inscription — pour les 50 premières nouvelles inscriptions</span>
+        </p>
       </section>
 
       {/* ADVANTAGES — the three standout differentiators, with real photos */}
