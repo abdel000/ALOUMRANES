@@ -11,7 +11,7 @@ import {
   MapPin,
 } from "lucide-react";
 import { SITE } from "@/lib/site";
-import { IMAGES } from "@/content/school";
+import { IMAGES, NEWS } from "@/content/school";
 import { AdmissionsForm } from "@/components/site/AdmissionsForm";
 
 const logo = "/images/logo-al-oumrane.png";
@@ -72,6 +72,10 @@ const FEATURES = [
     text: "Un parcours complet vers la réussite",
   },
 ];
+
+const NEWS_HIGHLIGHTS = NEWS.filter(
+  (n) => n.category === "Pédagogie" || n.category === "Réussite",
+);
 
 function InscriptionsLanding() {
   return (
@@ -158,6 +162,34 @@ function InscriptionsLanding() {
           <span className="text-2xl font-extrabold sm:text-3xl">-25%</span>
           <span>sur les frais d'inscription — pour les 50 premières nouvelles inscriptions</span>
         </p>
+      </section>
+
+      {/* NEWS HIGHLIGHTS — recent achievements as trust signals */}
+      <section className="bg-white px-5 py-14 sm:px-8 sm:py-20">
+        <div className="mx-auto max-w-5xl">
+          <h2 className="text-center text-2xl font-extrabold text-[#12213c] sm:text-3xl">
+            Nos dernières actualités
+          </h2>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2">
+            {NEWS_HIGHLIGHTS.map((n) => (
+              <div key={n.title} className="overflow-hidden rounded-2xl bg-[#f7f7f5] shadow-lg">
+                <img
+                  src={n.image}
+                  alt={n.title}
+                  loading="lazy"
+                  className="aspect-4/3 w-full object-cover"
+                />
+                <div className="p-5">
+                  <p className="text-xs font-semibold tracking-wide uppercase text-[#0e7a80]">
+                    {n.category} • {n.date}
+                  </p>
+                  <h3 className="mt-2 text-base font-bold text-[#12213c]">{n.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{n.excerpt}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* ADVANTAGES — the three standout differentiators, with real photos */}
