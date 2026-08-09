@@ -96,7 +96,7 @@ function InscriptionsLanding() {
       </header>
 
       {/* HERO */}
-      <section className="relative overflow-hidden bg-[#12213c] text-white">
+      <section className="bg-hero-gradient relative overflow-hidden text-white">
         <img
           src={IMAGES.heroBuilding}
           alt="Bâtiment du Groupe Scolaire Al Oumrane à Sidi Maârouf, Casablanca"
