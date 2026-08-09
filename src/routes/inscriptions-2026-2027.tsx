@@ -236,6 +236,24 @@ function InscriptionsLanding() {
         </div>
       </section>
 
+      {/* CAMPUS — full-width photo showing the scale of the school */}
+      <section className="relative overflow-hidden">
+        <img
+          src={IMAGES.campus}
+          alt="Façade du Groupe Scolaire Al Oumrane à Sidi Maârouf, Casablanca"
+          loading="lazy"
+          className="h-[50vh] w-full object-cover sm:h-[60vh]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 px-5 pb-8 text-center text-white sm:pb-12">
+          <p className="text-xl font-extrabold sm:text-3xl">Un grand campus pensé pour votre enfant</p>
+          <p className="mx-auto mt-2 max-w-xl text-sm text-white/85 sm:text-base">
+            Salles de classe, espaces de vie, terrains de sport et aires de jeux réunis sur un même
+            site à {SITE.district}.
+          </p>
+        </div>
+      </section>
+
       {/* FEATURES */}
       <section className="bg-white px-5 py-14 sm:px-8 sm:py-20">
         <div className="mx-auto grid max-w-5xl grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 sm:gap-10">
