@@ -153,19 +153,28 @@ function Admissions() {
             tone="inverse"
             eyebrow="Résultats"
             title="Des résultats communiqués par l'établissement."
-            subtitle="Nous n'affichons que des données vérifiées. Les statistiques de réussite seront publiées ici dès leur confirmation par l'établissement."
+            subtitle="Baccalauréat, session 2026 : tous nos candidats ont été reçus."
           />
           <div className="mt-12 grid gap-6 sm:grid-cols-3">
-            {["[STATISTIQUE BAC À CONFIRMER]", "[TAUX DE RÉUSSITE À CONFIRMER]", "[DONNÉE À CONFIRMER]"].map(
-              (s, i) => (
-                <Reveal key={s} delay={i * 80} className="border border-navy-foreground/15 p-6">
-                  <p className="font-display text-2xl text-gold">{s}</p>
-                  <p className="mt-3 text-xs text-navy-foreground/60">
-                    Selon les résultats communiqués par l'établissement.
-                  </p>
-                </Reveal>
-              ),
-            )}
+            {[
+              {
+                stat: "100%",
+                text: "Taux de réussite au Baccalauréat — session 2026",
+              },
+              {
+                stat: "100%",
+                text: "De nos candidats au Bac 2026 ont été admis",
+              },
+              {
+                stat: "100%",
+                text: "Aucun échec enregistré au Baccalauréat 2026",
+              },
+            ].map((s, i) => (
+              <Reveal key={s.text} delay={i * 80} className="border border-navy-foreground/15 p-6">
+                <p className="font-display text-4xl text-gold">{s.stat}</p>
+                <p className="mt-3 text-xs text-navy-foreground/60">{s.text}</p>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>
