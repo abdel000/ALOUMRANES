@@ -115,12 +115,12 @@ function InscriptionsLanding() {
             {SITE.schoolYear}
           </p>
 
-          <div className="mx-auto mt-8 max-w-md rounded-2xl bg-[#f4c40f] p-6 text-[#12213c] shadow-xl">
-            <p className="text-sm font-semibold tracking-wide uppercase">
+          <div className="mx-auto mt-6 inline-flex max-w-xs flex-col items-center rounded-xl bg-[#f4c40f] px-5 py-3 text-[#12213c] shadow-xl">
+            <p className="text-[0.65rem] font-semibold tracking-wide uppercase">
               Sur les frais d'inscription
             </p>
-            <p className="mt-1 text-4xl font-extrabold sm:text-5xl">-25%</p>
-            <p className="mt-2 text-sm font-semibold">
+            <p className="text-2xl font-extrabold sm:text-3xl">-25%</p>
+            <p className="text-xs font-semibold">
               Pour les 50 premières nouvelles inscriptions
             </p>
           </div>
