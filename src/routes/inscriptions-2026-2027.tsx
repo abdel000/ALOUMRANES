@@ -85,14 +85,14 @@ function InscriptionsLanding() {
         />
         <a
           href="#inscription-form"
-          className="inline-flex items-center gap-2 rounded-full bg-[#e5342c] px-4 py-2.5 text-sm font-bold tracking-wide uppercase text-white sm:px-6"
+          className="animate-cta-pulse inline-flex items-center gap-2 rounded-full bg-[#16a34a] px-4 py-2.5 text-sm font-bold tracking-wide uppercase text-white transition-colors hover:bg-[#15803d] sm:px-6"
         >
           Inscrire mon enfant
         </a>
       </header>
 
       {/* HERO */}
-      <section className="relative overflow-hidden bg-[#0e7a80] text-white">
+      <section className="relative overflow-hidden bg-[#12213c] text-white">
         <img
           src={IMAGES.heroBuilding}
           alt="Bâtiment du Groupe Scolaire Al Oumrane à Sidi Maârouf, Casablanca"
@@ -115,12 +115,12 @@ function InscriptionsLanding() {
             {SITE.schoolYear}
           </p>
 
-          <div className="mx-auto mt-6 inline-flex max-w-[15rem] flex-col items-center rounded-lg bg-[#12213c]/55 px-4 py-2 text-white shadow-xl backdrop-blur-sm">
-            <p className="text-[0.6rem] font-semibold tracking-wide uppercase text-white/80">
+          <div className="mx-auto mt-6 inline-flex max-w-[11rem] flex-col items-center rounded-md bg-[#12213c]/55 px-3 py-1.5 text-white shadow-xl backdrop-blur-sm">
+            <p className="text-[0.5rem] font-semibold tracking-wide uppercase text-white/80">
               Sur les frais d'inscription
             </p>
-            <p className="text-xl font-extrabold text-[#f4c40f] sm:text-2xl">-25%</p>
-            <p className="text-[0.7rem] font-semibold">
+            <p className="text-base font-extrabold text-[#f4c40f] sm:text-lg">-25%</p>
+            <p className="text-[0.55rem] font-semibold">
               Pour les 50 premières nouvelles inscriptions
             </p>
           </div>
@@ -146,7 +146,7 @@ function InscriptionsLanding() {
           <div className="mt-10 flex flex-wrap justify-center gap-3">
             <a
               href="#inscription-form"
-              className="inline-flex items-center gap-2 rounded-full bg-[#e5342c] px-8 py-4 text-sm font-bold tracking-wide uppercase text-white transition-transform hover:-translate-y-0.5"
+              className="animate-cta-pulse inline-flex items-center gap-2 rounded-full bg-[#16a34a] px-8 py-4 text-sm font-bold tracking-wide uppercase text-white transition-all hover:-translate-y-0.5 hover:bg-[#15803d]"
             >
               Profiter de l'offre
               <ArrowRight className="size-4" aria-hidden="true" />
@@ -251,7 +251,7 @@ function InscriptionsLanding() {
       </section>
 
       {/* FORM */}
-      <section id="inscription-form" className="scroll-mt-20 bg-[#0e7a80] px-5 py-14 sm:px-8 sm:py-20">
+      <section id="inscription-form" className="scroll-mt-20 bg-[#12213c] px-5 py-14 sm:px-8 sm:py-20">
         <div className="mx-auto max-w-2xl">
           <div className="text-center text-white">
             <h2 className="text-3xl font-extrabold sm:text-4xl">
@@ -289,7 +289,7 @@ function InscriptionsLanding() {
       <div className="fixed inset-x-0 bottom-0 z-40 lg:hidden">
         <a
           href="#inscription-form"
-          className="flex items-center justify-center gap-2 bg-[#e5342c] py-4 text-sm font-bold tracking-wide uppercase text-white"
+          className="animate-cta-pulse flex items-center justify-center gap-2 bg-[#16a34a] py-4 text-sm font-bold tracking-wide uppercase text-white"
         >
           Inscrire mon enfant
           <ArrowRight className="size-4" aria-hidden="true" />

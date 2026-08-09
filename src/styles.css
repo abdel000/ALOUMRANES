@@ -265,6 +265,20 @@
   color: transparent;
 }
 
+@keyframes cta-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(22, 163, 74, 0);
+  }
+}
+
+@utility animate-cta-pulse {
+  animation: cta-pulse 2s ease-in-out infinite;
+}
+
 @utility shadow-soft {
   box-shadow: var(--shadow-soft);
 }
