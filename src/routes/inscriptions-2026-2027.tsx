@@ -104,13 +104,13 @@ function InscriptionsLanding() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-black/5 to-black/35" />
 
-        <div className="relative mx-auto max-w-4xl px-5 py-14 text-center sm:px-8 sm:py-20">
+        <div className="relative mx-auto flex max-w-4xl flex-col items-center px-5 py-14 text-center sm:px-8 sm:py-20">
           <span className="inline-flex items-center gap-2 rounded-full bg-[#12213c]/60 px-4 py-2 text-xs font-semibold tracking-wide uppercase backdrop-blur-sm">
             <Star className="size-4 fill-[#f4c40f] text-[#f4c40f]" aria-hidden="true" />
             École à {SITE.district}, {SITE.city}
           </span>
 
-          <h1 className="mx-auto mt-6 inline-block rounded-3xl bg-white px-8 py-5 text-5xl leading-[1.02] font-extrabold tracking-tight shadow-2xl sm:px-12 sm:py-7 sm:text-7xl">
+          <h1 className="mt-6 rounded-3xl bg-white px-8 py-5 text-5xl leading-[1.02] font-extrabold tracking-tight shadow-2xl sm:px-12 sm:py-7 sm:text-7xl">
             <span className="text-navy">Inscriptions</span>
             <br />
             <span className="text-gold">ouvertes</span>
