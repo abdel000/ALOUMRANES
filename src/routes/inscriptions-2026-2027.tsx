@@ -115,7 +115,7 @@ function InscriptionsLanding() {
             {SITE.schoolYear}
           </p>
 
-          <div className="mx-auto mt-6 inline-flex max-w-[15rem] flex-col items-center rounded-lg bg-[#12213c] px-4 py-2 text-white shadow-xl">
+          <div className="mx-auto mt-6 inline-flex max-w-[15rem] flex-col items-center rounded-lg bg-[#12213c]/55 px-4 py-2 text-white shadow-xl backdrop-blur-sm">
             <p className="text-[0.6rem] font-semibold tracking-wide uppercase text-white/80">
               Sur les frais d'inscription
             </p>
