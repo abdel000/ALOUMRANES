@@ -4,6 +4,7 @@ import { SectionHeading } from "@/components/site/SectionHeading";
 import { Reveal } from "@/components/site/Reveal";
 import { AdmissionsCta } from "@/components/site/Sections";
 import { ACTIVITY_CATEGORIES, IMAGES } from "@/content/school";
+import { absoluteUrl } from "@/lib/site";
 
 const title = "Activités parascolaires | Al Oumrane, Casablanca";
 const description =
@@ -16,9 +17,9 @@ export const Route = createFileRoute("/activites")({
       { name: "description", content: description },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
-      { property: "og:url", content: "/activites" },
+      { property: "og:url", content: absoluteUrl("/activites") },
     ],
-    links: [{ rel: "canonical", href: "/activites" }],
+    links: [{ rel: "canonical", href: absoluteUrl("/activites") }],
   }),
   component: Activites,
 });

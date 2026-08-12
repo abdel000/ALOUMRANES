@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import * as Icons from "lucide-react";
 const heroImage = "/images/gmb-03.jpg";
-import { SITE, track } from "@/lib/site";
+import { absoluteUrl, SITE, track } from "@/lib/site";
 import { CYCLES, IMAGES, SUPPORT_STEPS, TESTIMONIALS, TRUST_POINTS, WHY } from "@/content/school";
 import { CtaLink, TextLink } from "@/components/site/Cta";
 import { SectionHeading } from "@/components/site/SectionHeading";
@@ -26,11 +26,11 @@ export const Route = createFileRoute("/")({
       { name: "description", content: description },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: absoluteUrl("/") },
       { name: "twitter:title", content: title },
       { name: "twitter:description", content: description },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: absoluteUrl("/") }],
   }),
   component: Home,
 });

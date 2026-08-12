@@ -6,7 +6,7 @@ import { CycleCards } from "@/components/site/CycleCards";
 import { AdmissionsCta, LocationSection } from "@/components/site/Sections";
 import { IMAGES, TRUST_POINTS } from "@/content/school";
 import { CtaLink } from "@/components/site/Cta";
-import { SITE } from "@/lib/site";
+import { absoluteUrl, SITE } from "@/lib/site";
 
 const title = "Notre École | Groupe Scolaire Al Oumrane, Sidi Maârouf Casablanca";
 const description =
@@ -19,9 +19,9 @@ export const Route = createFileRoute("/notre-ecole")({
       { name: "description", content: description },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
-      { property: "og:url", content: "/notre-ecole" },
+      { property: "og:url", content: absoluteUrl("/notre-ecole") },
     ],
-    links: [{ rel: "canonical", href: "/notre-ecole" }],
+    links: [{ rel: "canonical", href: absoluteUrl("/notre-ecole") }],
   }),
   component: NotreEcole,
 });

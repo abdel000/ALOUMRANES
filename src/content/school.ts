@@ -267,6 +267,50 @@ export const NEWS: NewsItem[] = [
   },
 ];
 
+export type FaqItem = { question: string; answer: string };
+
+/**
+ * Questions fréquentes des parents, avec réponses basées uniquement sur des faits
+ * déjà publiés ailleurs sur le site (adresse, horaires, étapes d'admission, résultats
+ * Bac 2026, transport). Ne pas ajouter de question dont la réponse n'est pas vérifiée.
+ */
+export const FAQ: FaqItem[] = [
+  {
+    question: "Où se trouve le Groupe Scolaire Al Oumrane ?",
+    answer:
+      "Le Groupe Scolaire Al Oumrane est situé Lotissement Salma, Route de Sidi Maârouf, 20280 Casablanca, dans le quartier de Sidi Maârouf.",
+  },
+  {
+    question: "Quels niveaux scolaires propose l'école ?",
+    answer:
+      "L'école accueille les élèves de la maternelle au lycée : maternelle, primaire, collège et lycée, dans un parcours pédagogique continu.",
+  },
+  {
+    question: "Quels sont les horaires de l'école ?",
+    answer: "Lundi au vendredi de 08h00 à 18h00. L'établissement est fermé le samedi et le dimanche.",
+  },
+  {
+    question: "Comment inscrire mon enfant au Groupe Scolaire Al Oumrane ?",
+    answer:
+      "L'inscription se déroule en quatre étapes : prendre contact par téléphone, WhatsApp ou via le formulaire du site ; échanger avec l'équipe sur le parcours de l'enfant ; visiter l'établissement ; puis finaliser les démarches administratives d'inscription.",
+  },
+  {
+    question: "L'école propose-t-elle un transport scolaire ?",
+    answer:
+      "Oui. Une flotte de bus assure le ramassage scolaire des élèves dans le secteur de Sidi Maârouf.",
+  },
+  {
+    question: "Quel est le taux de réussite au Baccalauréat au Groupe Scolaire Al Oumrane ?",
+    answer:
+      "Tous les candidats du Groupe Scolaire Al Oumrane au Baccalauréat de la session 2026 ont été reçus, soit un taux de réussite de 100%.",
+  },
+  {
+    question: "Comment contacter le Groupe Scolaire Al Oumrane ?",
+    answer:
+      "Par téléphone au 05 22 97 25 24, ou via le formulaire de demande de visite / d'informations disponible sur le site.",
+  },
+];
+
 export const GALLERY = [
   { src: facade2, alt: "Façade du Groupe Scolaire Al Oumrane à Sidi Maârouf, Casablanca", caption: "Notre établissement", category: "Campus" },
   { src: atelier1, alt: "Ateliers de maternelle encadrés par les enseignantes dans la cour", caption: "Ateliers de maternelle", category: "Maternelle" },

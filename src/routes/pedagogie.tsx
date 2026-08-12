@@ -4,6 +4,7 @@ import { SectionHeading } from "@/components/site/SectionHeading";
 import { Reveal } from "@/components/site/Reveal";
 import { AdmissionsCta } from "@/components/site/Sections";
 import { IMAGES, SUPPORT_STEPS, WHY } from "@/content/school";
+import { absoluteUrl } from "@/lib/site";
 import * as Icons from "lucide-react";
 
 const title = "Pédagogie | Groupe Scolaire Al Oumrane, Casablanca";
@@ -17,9 +18,9 @@ export const Route = createFileRoute("/pedagogie")({
       { name: "description", content: description },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
-      { property: "og:url", content: "/pedagogie" },
+      { property: "og:url", content: absoluteUrl("/pedagogie") },
     ],
-    links: [{ rel: "canonical", href: "/pedagogie" }],
+    links: [{ rel: "canonical", href: absoluteUrl("/pedagogie") }],
   }),
   component: Pedagogie,
 });

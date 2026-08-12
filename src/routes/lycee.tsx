@@ -7,6 +7,7 @@ import { CtaLink } from "@/components/site/Cta";
 import { CycleCards } from "@/components/site/CycleCards";
 import { AdmissionsCta } from "@/components/site/Sections";
 import { CYCLES } from "@/content/school";
+import { absoluteUrl } from "@/lib/site";
 
 const cycle = CYCLES[3]!;
 
@@ -21,9 +22,9 @@ export const Route = createFileRoute("/lycee")({
       { name: "description", content: description },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
-      { property: "og:url", content: "/lycee" },
+      { property: "og:url", content: absoluteUrl("/lycee") },
     ],
-    links: [{ rel: "canonical", href: "/lycee" }],
+    links: [{ rel: "canonical", href: absoluteUrl("/lycee") }],
   }),
   component: Lycee,
 });

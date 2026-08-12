@@ -4,6 +4,7 @@ import { SectionHeading } from "@/components/site/SectionHeading";
 import { Reveal } from "@/components/site/Reveal";
 import { AdmissionsCta } from "@/components/site/Sections";
 import { NEWS, IMAGES } from "@/content/school";
+import { absoluteUrl } from "@/lib/site";
 
 const title = "Actualités | Groupe Scolaire Al Oumrane, Casablanca";
 const description =
@@ -16,9 +17,9 @@ export const Route = createFileRoute("/actualites")({
       { name: "description", content: description },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
-      { property: "og:url", content: "/actualites" },
+      { property: "og:url", content: absoluteUrl("/actualites") },
     ],
-    links: [{ rel: "canonical", href: "/actualites" }],
+    links: [{ rel: "canonical", href: absoluteUrl("/actualites") }],
   }),
   component: Actualites,
 });

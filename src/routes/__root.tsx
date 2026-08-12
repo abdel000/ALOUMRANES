@@ -16,7 +16,7 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { MobileActionBar, WhatsAppFloat } from "@/components/site/MobileActionBar";
 import { Toaster } from "@/components/ui/sonner";
-import { SITE } from "@/lib/site";
+import { DEFAULT_OG_IMAGE, SITE, SITE_URL } from "@/lib/site";
 
 function NotFoundComponent() {
   return (
@@ -84,7 +84,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: SITE.name },
       { property: "og:locale", content: "fr_MA" },
+      { property: "og:image", content: DEFAULT_OG_IMAGE },
+      { property: "og:image:alt", content: `${SITE.name} — ${SITE.district}, ${SITE.city}` },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: DEFAULT_OG_IMAGE },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -102,7 +105,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "EducationalOrganization",
+          "@id": `${SITE_URL}/#organization`,
           name: SITE.name,
+          url: SITE_URL,
+          logo: `${SITE_URL}/images/logo-al-oumrane.png`,
+          image: DEFAULT_OG_IMAGE,
           description:
             "École privée à Sidi Maârouf, Casablanca : maternelle, primaire, collège et lycée.",
           address: {

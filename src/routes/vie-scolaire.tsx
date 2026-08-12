@@ -5,6 +5,7 @@ import { Gallery } from "@/components/site/Gallery";
 import { AdmissionsCta } from "@/components/site/Sections";
 import { TextLink } from "@/components/site/Cta";
 import { IMAGES } from "@/content/school";
+import { absoluteUrl } from "@/lib/site";
 
 const title = "Vie Scolaire | Groupe Scolaire Al Oumrane, Casablanca";
 const description =
@@ -17,9 +18,9 @@ export const Route = createFileRoute("/vie-scolaire")({
       { name: "description", content: description },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
-      { property: "og:url", content: "/vie-scolaire" },
+      { property: "og:url", content: absoluteUrl("/vie-scolaire") },
     ],
-    links: [{ rel: "canonical", href: "/vie-scolaire" }],
+    links: [{ rel: "canonical", href: absoluteUrl("/vie-scolaire") }],
   }),
   component: VieScolaire,
 });

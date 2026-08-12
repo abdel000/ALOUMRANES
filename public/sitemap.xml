@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- TODO: remplacer BASE_URL par le domaine final de l'établissement. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>/</loc><priority>1.0</priority></url>
-  <url><loc>/notre-ecole</loc><priority>0.8</priority></url>
-  <url><loc>/pedagogie</loc><priority>0.8</priority></url>
-  <url><loc>/maternelle</loc><priority>0.8</priority></url>
-  <url><loc>/primaire</loc><priority>0.8</priority></url>
-  <url><loc>/college</loc><priority>0.8</priority></url>
-  <url><loc>/lycee</loc><priority>0.8</priority></url>
-  <url><loc>/vie-scolaire</loc><priority>0.7</priority></url>
-  <url><loc>/activites</loc><priority>0.7</priority></url>
-  <url><loc>/admissions</loc><priority>0.9</priority></url>
-  <url><loc>/actualites</loc><priority>0.6</priority></url>
-  <url><loc>/contact</loc><priority>0.8</priority></url>
-  <url><loc>/demande-visite</loc><priority>0.9</priority></url>
+  <url><loc>https://www.groupescolairealoumrane.com/</loc><lastmod>2026-08-12</lastmod><priority>1.0</priority></url>
+  <url><loc>https://www.groupescolairealoumrane.com/notre-ecole</loc><lastmod>2026-08-12</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.groupescolairealoumrane.com/pedagogie</loc><lastmod>2026-08-12</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.groupescolairealoumrane.com/maternelle</loc><lastmod>2026-08-12</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.groupescolairealoumrane.com/primaire</loc><lastmod>2026-08-12</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.groupescolairealoumrane.com/college</loc><lastmod>2026-08-12</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.groupescolairealoumrane.com/lycee</loc><lastmod>2026-08-12</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.groupescolairealoumrane.com/vie-scolaire</loc><lastmod>2026-08-12</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.groupescolairealoumrane.com/activites</loc><lastmod>2026-08-12</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.groupescolairealoumrane.com/admissions</loc><lastmod>2026-08-12</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.groupescolairealoumrane.com/actualites</loc><lastmod>2026-08-12</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.groupescolairealoumrane.com/contact</loc><lastmod>2026-08-12</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.groupescolairealoumrane.com/demande-visite</loc><lastmod>2026-08-12</lastmod><priority>0.9</priority></url>
 </urlset>

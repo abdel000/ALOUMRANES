@@ -10,7 +10,7 @@ import {
   ArrowRight,
   MapPin,
 } from "lucide-react";
-import { SITE } from "@/lib/site";
+import { absoluteUrl, SITE } from "@/lib/site";
 import { IMAGES, NEWS } from "@/content/school";
 import { AdmissionsForm } from "@/components/site/AdmissionsForm";
 
@@ -27,7 +27,7 @@ export const Route = createFileRoute("/inscriptions-2026-2027")({
       { name: "robots", content: "noindex, nofollow" },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
-      { property: "og:url", content: "/inscriptions-2026-2027" },
+      { property: "og:url", content: absoluteUrl("/inscriptions-2026-2027") },
     ],
   }),
   component: InscriptionsLanding,

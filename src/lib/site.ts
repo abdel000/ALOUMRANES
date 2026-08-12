@@ -1,3 +1,11 @@
+/** Canonical production domain — keep in sync with public/robots.txt and public/sitemap.xml. */
+export const SITE_URL = "https://www.groupescolairealoumrane.com";
+
+export const absoluteUrl = (path: string) => `${SITE_URL}${path}`;
+
+/** Default social-share image (1200x630-ish) used when a page doesn't set its own og:image. */
+export const DEFAULT_OG_IMAGE = absoluteUrl("/images/gmb-03.jpg");
+
 export const SITE = {
   name: "Groupe Scolaire Al Oumrane",
   shortName: "Al Oumrane",

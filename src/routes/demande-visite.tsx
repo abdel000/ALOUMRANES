@@ -5,7 +5,7 @@ import { SectionHeading } from "@/components/site/SectionHeading";
 import { Reveal } from "@/components/site/Reveal";
 import { LocationSection } from "@/components/site/Sections";
 import { IMAGES, ADMISSION_STEPS } from "@/content/school";
-import { SITE } from "@/lib/site";
+import { absoluteUrl, SITE } from "@/lib/site";
 
 const title = "Demander une visite | Groupe Scolaire Al Oumrane, Casablanca";
 const description =
@@ -18,9 +18,9 @@ export const Route = createFileRoute("/demande-visite")({
       { name: "description", content: description },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
-      { property: "og:url", content: "/demande-visite" },
+      { property: "og:url", content: absoluteUrl("/demande-visite") },
     ],
-    links: [{ rel: "canonical", href: "/demande-visite" }],
+    links: [{ rel: "canonical", href: absoluteUrl("/demande-visite") }],
   }),
   component: Visite,
 });

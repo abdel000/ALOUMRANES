@@ -6,7 +6,7 @@ import { Reveal } from "@/components/site/Reveal";
 import { AdmissionsForm } from "@/components/site/AdmissionsForm";
 import { LocationSection } from "@/components/site/Sections";
 import { CtaLink } from "@/components/site/Cta";
-import { SITE, whatsappHref, track } from "@/lib/site";
+import { absoluteUrl, SITE, whatsappHref, track } from "@/lib/site";
 import { IMAGES } from "@/content/school";
 
 const title = "Contact | Groupe Scolaire Al Oumrane, Sidi Maârouf Casablanca";
@@ -20,9 +20,9 @@ export const Route = createFileRoute("/contact")({
       { name: "description", content: description },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
-      { property: "og:url", content: "/contact" },
+      { property: "og:url", content: absoluteUrl("/contact") },
     ],
-    links: [{ rel: "canonical", href: "/contact" }],
+    links: [{ rel: "canonical", href: absoluteUrl("/contact") }],
   }),
   component: Contact,
 });

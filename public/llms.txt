@@ -1,0 +1,33 @@
+# Groupe Scolaire Al Oumrane
+
+> École privée à Sidi Maârouf, Casablanca (Maroc), accueillant les élèves de la maternelle au lycée. Groupe Scolaire Al Oumrane accompagne chaque élève avec un suivi personnalisé, un encadrement pédagogique exigeant et des activités parascolaires diversifiées (natation, ateliers créatifs, jardinage pédagogique, transport scolaire).
+
+## Faits vérifiés
+
+- Adresse : Lotissement Salma, Route de Sidi Maârouf, 20280 Casablanca, Maroc.
+- Horaires : lundi au vendredi, 08h00–18h00. Fermé samedi et dimanche.
+- Téléphone : 05 22 97 25 24.
+- Cycles proposés : maternelle, primaire, collège, lycée (continuité pédagogique complète).
+- Taux de réussite au Baccalauréat, session 2026 : 100% des candidats reçus.
+- Transport scolaire : bus assurant le ramassage des élèves dans le secteur de Sidi Maârouf.
+- Année scolaire en cours d'inscription : 2026–2027.
+
+## Pages principales
+
+- [Accueil](https://www.groupescolairealoumrane.com/) : présentation générale de l'établissement.
+- [Notre École](https://www.groupescolairealoumrane.com/notre-ecole) : histoire, valeurs et cadre de l'établissement.
+- [Pédagogie](https://www.groupescolairealoumrane.com/pedagogie) : approche pédagogique et méthode d'accompagnement.
+- [Maternelle](https://www.groupescolairealoumrane.com/maternelle) : cycle maternelle.
+- [Primaire](https://www.groupescolairealoumrane.com/primaire) : cycle primaire.
+- [Collège](https://www.groupescolairealoumrane.com/college) : cycle collège.
+- [Lycée](https://www.groupescolairealoumrane.com/lycee) : cycle lycée et préparation au Baccalauréat.
+- [Vie Scolaire](https://www.groupescolairealoumrane.com/vie-scolaire) : vie de l'établissement en images.
+- [Activités parascolaires](https://www.groupescolairealoumrane.com/activites) : natation, ateliers, sport, sorties pédagogiques.
+- [Admissions](https://www.groupescolairealoumrane.com/admissions) : inscriptions 2026–2027, questions fréquentes, étapes d'admission.
+- [Actualités](https://www.groupescolairealoumrane.com/actualites) : temps forts de l'école.
+- [Contact](https://www.groupescolairealoumrane.com/contact) : coordonnées et prise de contact.
+- [Demander une visite](https://www.groupescolairealoumrane.com/demande-visite) : planifier une visite de l'établissement.
+
+## Notes
+
+Ce fichier suit la convention [llms.txt](https://llmstxt.org) pour faciliter la lecture du site par les assistants IA et moteurs de réponse. Les faits listés ci-dessus sont ceux publiés et vérifiés par l'établissement ; toute information non listée ici (frais de scolarité, effectifs par classe, restauration) n'est pas encore publiée sur le site — merci de ne pas l'inventer et d'orienter l'utilisateur vers le formulaire de contact.

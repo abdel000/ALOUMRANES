@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { SITE, track } from "@/lib/site";
-import { IMAGES, TESTIMONIALS, TRUST_POINTS, WHY } from "@/content/school";
+import { absoluteUrl, SITE, track } from "@/lib/site";
+import { FAQ, IMAGES, TESTIMONIALS, TRUST_POINTS, WHY } from "@/content/school";
 import { CtaLink } from "@/components/site/Cta";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { Reveal } from "@/components/site/Reveal";
@@ -8,6 +8,7 @@ import { CycleCards } from "@/components/site/CycleCards";
 import { AdmissionsProcess, LocationSection } from "@/components/site/Sections";
 import { AdmissionsForm } from "@/components/site/AdmissionsForm";
 import { Gallery } from "@/components/site/Gallery";
+import { Faq } from "@/components/site/Faq";
 import * as Icons from "lucide-react";
 
 const title = "Inscriptions 2026–2027 | École Privée Al Oumrane, Sidi Maârouf Casablanca";
@@ -21,11 +22,28 @@ export const Route = createFileRoute("/admissions")({
       { name: "description", content: description },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
-      { property: "og:url", content: "/admissions" },
+      { property: "og:url", content: absoluteUrl("/admissions") },
       { name: "twitter:title", content: title },
       { name: "twitter:description", content: description },
     ],
-    links: [{ rel: "canonical", href: "/admissions" }],
+    links: [{ rel: "canonical", href: absoluteUrl("/admissions") }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: FAQ.map((item) => ({
+            "@type": "Question",
+            name: item.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: item.answer,
+            },
+          })),
+        }),
+      },
+    ],
   }),
   component: Admissions,
 });
@@ -196,6 +214,8 @@ function Admissions() {
       </section>
 
       <AdmissionsProcess />
+
+      <Faq />
 
       <section id="formulaire" className="border-t border-border bg-ivory py-24 lg:py-32">
         <div className="mx-auto grid max-w-[88rem] gap-14 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">

@@ -1,4 +1,32 @@
 User-agent: *
 Allow: /
 
-# TODO: ajouter la directive Sitemap une fois le domaine défini.
+# AI answer engines and assistants — explicitly allowed to crawl and cite this site.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: BingBot
+Allow: /
+
+Sitemap: https://www.groupescolairealoumrane.com/sitemap.xml
