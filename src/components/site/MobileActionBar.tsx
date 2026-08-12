@@ -41,7 +41,7 @@ export function WhatsAppFloat() {
       href={whatsappHref()}
       onClick={() => track("whatsapp_click", { location: "float" })}
       aria-label="Écrire sur WhatsApp"
-      className="fixed right-6 bottom-6 z-40 hidden items-center gap-3 rounded-full bg-navy px-5 py-4 text-sm text-navy-foreground shadow-lg transition-transform duration-300 hover:-translate-y-0.5 lg:inline-flex"
+      className="fixed right-6 bottom-6 z-40 hidden items-center gap-3 rounded-full bg-[#16a34a] px-5 py-4 text-sm text-white shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#15803d] lg:inline-flex"
     >
       <MessageCircle className="size-5" aria-hidden="true" />
       Écrire sur WhatsApp
