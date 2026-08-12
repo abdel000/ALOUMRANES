@@ -35,7 +35,7 @@ function Contact() {
         title="Parlons de son avenir."
         intro="Notre équipe est à votre disposition pour répondre à vos questions sur la scolarité, les inscriptions et l'organisation de l'établissement."
         image={IMAGES.philosophy}
-        imageAlt="Échange entre une enseignante et une élève au Groupe Scolaire Al Oumrane"
+        imageAlt="Contact de l'école privée Al Oumrane à Sidi Maârouf, Casablanca"
         actions={
           <>
             <CtaLink to="/demande-visite" variant="solid">

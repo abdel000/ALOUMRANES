@@ -14,7 +14,7 @@ export function CyclePage({ cycle }: { cycle: Cycle }) {
         title={cycle.title}
         intro={cycle.intro}
         image={cycle.image}
-        imageAlt={`Élèves du cycle ${cycle.title} au Groupe Scolaire Al Oumrane`}
+        imageAlt={cycle.imageAlt}
         actions={
           <>
             <CtaLink to="/demande-visite" variant="solid">

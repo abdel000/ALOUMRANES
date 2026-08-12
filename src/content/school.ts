@@ -1,31 +1,31 @@
-const facade1 = "/images/gmb-01.jpg";
-const pool1 = "/images/gmb-02.jpg";
-const facade2 = "/images/gmb-03.jpg";
-const atelier1 = "/images/gmb-04.jpg";
-const pool2 = "/images/gmb-05.jpg";
-const kids = "/images/gmb-06.jpg";
-const atelier2 = "/images/gmb-07.jpg";
-const courBus = "/images/gmb-08.jpg";
-const library = "/images/gmb-09.jpg";
-const poolStudy = "/images/gmb-10.jpg";
-const facadeFisheye = "/images/gmb-building-fisheye.webp";
-const ecranInteractif = "/images/ecran-interactif-ecole-scaled.jpg";
-const bac100 = "/images/Bac100.png";
+const facade1 = "/images/ecole-privee-sidi-maarouf-entree-principale.jpg";
+const pool1 = "/images/ecole-privee-casablanca-piscine-natation.jpg";
+const facade2 = "/images/ecole-privee-sidi-maarouf-casablanca-facade.jpg";
+const atelier1 = "/images/maternelle-privee-sidi-maarouf-atelier-creatif.jpg";
+const pool2 = "/images/ecole-privee-bouskoura-piscine-couverte.jpg";
+const kids = "/images/maternelle-privee-casablanca-aire-de-jeux.jpg";
+const atelier2 = "/images/primaire-prive-sidi-maarouf-travail-groupe.jpg";
+const courBus = "/images/college-prive-sidi-maarouf-cour-transport-scolaire.jpg";
+const library = "/images/lycee-prive-casablanca-bibliotheque.jpg";
+const poolStudy = "/images/lycee-prive-sidi-maarouf-etude-plein-air.jpg";
+const facadeFisheye = "/images/ecole-privee-sidi-maarouf-casablanca-batiment.webp";
+const ecranInteractif = "/images/ecole-privee-casablanca-ecran-interactif-classe.jpg";
+const bac100 = "/images/lycee-prive-casablanca-100-pourcent-baccalaureat.png";
 
-const ateliersCreatifs = "/images/gallery-ateliers-creatifs.jpg";
-const jardinageArrosage = "/images/gallery-jardinage-arrosage.jpg";
-const courMaternelle = "/images/gallery-cour-maternelle.jpg";
-const tirArc1 = "/images/gallery-tir-arc-01.jpg";
-const tirArc2 = "/images/gallery-tir-arc-02.jpg";
-const sortiePoney = "/images/gallery-sortie-poney.jpg";
-const jardinagePlantation = "/images/gallery-jardinage-plantation.jpg";
-const parcoursMotricite1 = "/images/gallery-parcours-motricite-01.jpg";
-const sportFoot = "/images/gallery-sport-foot.jpg";
-const sportCollege = "/images/gallery-sport-college.jpg";
-const evenementEquipe = "/images/gallery-evenement-equipe.jpg";
-const spectacleScolaire = "/images/gallery-spectacle-scolaire.jpg";
-const jeuPedagogique = "/images/gallery-jeu-pedagogique.jpg";
-const parcoursMotricite2 = "/images/gallery-parcours-motricite-02.jpg";
+const ateliersCreatifs = "/images/ecole-trilingue-sidi-maarouf-atelier-creatif.jpg";
+const jardinageArrosage = "/images/college-prive-bouskoura-atelier-jardinage.jpg";
+const courMaternelle = "/images/maternelle-privee-sidi-maarouf-cour-recreation.jpg";
+const tirArc1 = "/images/college-prive-casablanca-tir-a-arc-activite.jpg";
+const tirArc2 = "/images/college-prive-sidi-maarouf-tir-a-arc-cible.jpg";
+const sortiePoney = "/images/ecole-privee-bouskoura-sortie-pedagogique-poney.jpg";
+const jardinagePlantation = "/images/primaire-prive-sidi-maarouf-potager-pedagogique.jpg";
+const parcoursMotricite1 = "/images/maternelle-privee-casablanca-parcours-motricite.jpg";
+const sportFoot = "/images/college-prive-sidi-maarouf-football-sport.jpg";
+const sportCollege = "/images/college-prive-casablanca-handball-sport.jpg";
+const evenementEquipe = "/images/ecole-privee-sidi-maarouf-equipe-pedagogique.jpg";
+const spectacleScolaire = "/images/vie-scolaire-ecole-privee-sidi-maarouf-spectacle.jpg";
+const jeuPedagogique = "/images/college-prive-bouskoura-jeu-pedagogique-scene.jpg";
+const parcoursMotricite2 = "/images/maternelle-privee-sidi-maarouf-eveil-moteur-groupe.jpg";
 
 /** Photos officielles issues de la fiche Google du Groupe Scolaire Al Oumrane. */
 const maternelle = kids;
@@ -50,6 +50,7 @@ export type Cycle = {
   title: string;
   description: string;
   image: string;
+  imageAlt: string;
   intro: string;
   points: string[];
 };
@@ -62,6 +63,7 @@ export const CYCLES: Cycle[] = [
     title: "Maternelle",
     description: "Les premières bases pour apprendre, découvrir et s'épanouir.",
     image: maternelle,
+    imageAlt: "Maternelle privée à Sidi Maârouf, Casablanca — élèves du Groupe Scolaire Al Oumrane",
     intro:
       "La maternelle est le temps des premières découvertes. Dans un cadre rassurant et structuré, chaque enfant apprend à s'exprimer, à vivre avec les autres et à prendre confiance en lui.",
     points: [
@@ -78,6 +80,7 @@ export const CYCLES: Cycle[] = [
     title: "Primaire",
     description: "Construire des fondamentaux solides et développer le goût d'apprendre.",
     image: primaire,
+    imageAlt: "École primaire privée à Sidi Maârouf, Casablanca — élèves du Groupe Scolaire Al Oumrane",
     intro:
       "Au primaire, les apprentissages fondamentaux se consolident. L'objectif est double : maîtriser les savoirs essentiels et développer des méthodes de travail durables.",
     points: [
@@ -94,6 +97,7 @@ export const CYCLES: Cycle[] = [
     title: "Collège",
     description: "Accompagner l'adolescent dans une étape clé de son parcours scolaire.",
     image: college,
+    imageAlt: "Collège privé à Sidi Maârouf, Casablanca — élèves du Groupe Scolaire Al Oumrane",
     intro:
       "Le collège est une étape de transition. Nous accompagnons chaque élève dans l'organisation de son travail, la construction de sa méthode et l'affirmation de sa personnalité.",
     points: [
@@ -111,6 +115,7 @@ export const CYCLES: Cycle[] = [
     description:
       "Préparer efficacement les élèves aux exigences de l'enseignement supérieur et du Baccalauréat.",
     image: lycee,
+    imageAlt: "Lycée privé à Sidi Maârouf, Casablanca — élèves en préparation du Baccalauréat",
     intro:
       "Au lycée, chaque étape compte. L'accompagnement vise la consolidation des acquis, l'autonomie de travail et une préparation méthodique aux échéances académiques.",
     points: [
@@ -312,30 +317,30 @@ export const FAQ: FaqItem[] = [
 ];
 
 export const GALLERY = [
-  { src: facade2, alt: "Façade du Groupe Scolaire Al Oumrane à Sidi Maârouf, Casablanca", caption: "Notre établissement", category: "Campus" },
-  { src: atelier1, alt: "Ateliers de maternelle encadrés par les enseignantes dans la cour", caption: "Ateliers de maternelle", category: "Maternelle" },
-  { src: pool1, alt: "Élèves en cours de natation dans la piscine de l'école", caption: "Cours de natation", category: "Sport" },
-  { src: kids, alt: "Jeunes élèves de maternelle sur l'aire de jeux", caption: "Aire de jeux", category: "Maternelle" },
-  { src: library, alt: "Bibliothèque de l'école : rayons anglais, dictionnaires et bandes dessinées", caption: "Bibliothèque", category: "Ressources" },
-  { src: courBus, alt: "Cour de récréation et bus de transport scolaire de l'établissement", caption: "Cour & transport scolaire", category: "Campus" },
-  { src: atelier2, alt: "Travail en petits groupes en classe de maternelle", caption: "Travail en petits groupes", category: "Pédagogie" },
-  { src: poolStudy, alt: "Élèves travaillant en plein air au bord de la piscine", caption: "Activités en plein air", category: "Vie scolaire" },
-  { src: pool2, alt: "Piscine couverte de l'école sous pergola", caption: "Espace piscine", category: "Sport" },
-  { src: facade1, alt: "Entrée principale du Groupe Scolaire Al Oumrane", caption: "Entrée principale", category: "Campus" },
-  { src: ateliersCreatifs, alt: "Élèves de maternelle en atelier de dessin autour d'une table hexagonale colorée", caption: "Ateliers créatifs en plein air", category: "Maternelle" },
-  { src: tirArc1, alt: "Collégienne s'entraînant au tir à l'arc lors d'une sortie pédagogique", caption: "Initiation au tir à l'arc", category: "Activités" },
-  { src: tirArc2, alt: "Élève visant une cible lors d'un atelier de tir à l'arc", caption: "Atelier tir à l'arc", category: "Activités" },
-  { src: sortiePoney, alt: "Élèves en balade à cheval et calèche lors d'une sortie pédagogique à la campagne", caption: "Sortie pédagogique à la ferme", category: "Sorties" },
-  { src: jardinageArrosage, alt: "Deux collégiennes arrosant une jeune plantation dans le jardin de l'école", caption: "Atelier jardinage", category: "Environnement" },
-  { src: jardinagePlantation, alt: "Élève plantant dans un carré potager décoré par les enfants", caption: "Potager pédagogique", category: "Environnement" },
-  { src: courMaternelle, alt: "Cour de récréation dédiée à la maternelle avec structures de jeux", category: "Maternelle", caption: "Cour de la maternelle" },
-  { src: parcoursMotricite1, alt: "Enfants en parcours de motricité avec trottinettes dans la bibliothèque", caption: "Parcours de motricité", category: "Maternelle" },
-  { src: parcoursMotricite2, alt: "Groupe d'enfants en tenue de sport participant à un parcours d'obstacles", caption: "Éveil moteur en groupe", category: "Maternelle" },
-  { src: sportFoot, alt: "Collégiens en séance de football encadrée sur le terrain de sport", caption: "Séance de football", category: "Sport" },
-  { src: sportCollege, alt: "Élèves du collège en match de handball sur le terrain de sport", caption: "Match de handball", category: "Sport" },
-  { src: jeuPedagogique, alt: "Jeu pédagogique interactif sur scène avec les élèves du collège", caption: "Jeu pédagogique sur scène", category: "Pédagogie" },
-  { src: spectacleScolaire, alt: "Élèves sur scène lors d'un spectacle devant leurs camarades", caption: "Spectacle scolaire", category: "Vie scolaire" },
-  { src: evenementEquipe, alt: "Équipe pédagogique et administrative réunie pour les 25 ans de l'établissement", caption: "25 ans du Groupe Scolaire Al Oumrane", category: "Vie scolaire" },
+  { src: facade2, alt: "Façade de l'école privée Al Oumrane à Sidi Maârouf, Casablanca", caption: "Notre établissement", category: "Campus" },
+  { src: atelier1, alt: "Ateliers de la maternelle privée à Sidi Maârouf encadrés par les enseignantes dans la cour", caption: "Ateliers de maternelle", category: "Maternelle" },
+  { src: pool1, alt: "Élèves en cours de natation à l'école privée Al Oumrane, Sidi Maârouf Casablanca", caption: "Cours de natation", category: "Sport" },
+  { src: kids, alt: "Jeunes élèves de la maternelle privée sur l'aire de jeux, Casablanca", caption: "Aire de jeux", category: "Maternelle" },
+  { src: library, alt: "Bibliothèque du lycée privé Al Oumrane : rayons anglais, dictionnaires et bandes dessinées", caption: "Bibliothèque", category: "Ressources" },
+  { src: courBus, alt: "Cour de récréation et transport scolaire du collège privé à Sidi Maârouf", caption: "Cour & transport scolaire", category: "Campus" },
+  { src: atelier2, alt: "Travail en petits groupes en classe de l'école primaire privée à Sidi Maârouf", caption: "Travail en petits groupes", category: "Pédagogie" },
+  { src: poolStudy, alt: "Élèves du lycée privé travaillant en plein air au bord de la piscine, Sidi Maârouf", caption: "Activités en plein air", category: "Vie scolaire" },
+  { src: pool2, alt: "Piscine couverte de l'école privée Al Oumrane sous pergola, Sidi Maârouf — accessible depuis Bouskoura", caption: "Espace piscine", category: "Sport" },
+  { src: facade1, alt: "Entrée principale de l'école privée Al Oumrane à Sidi Maârouf, Casablanca", caption: "Entrée principale", category: "Campus" },
+  { src: ateliersCreatifs, alt: "Élèves de la maternelle trilingue en atelier de dessin, école privée Sidi Maârouf", caption: "Ateliers créatifs en plein air", category: "Maternelle" },
+  { src: tirArc1, alt: "Collégienne du collège privé s'entraînant au tir à l'arc lors d'une sortie pédagogique", caption: "Initiation au tir à l'arc", category: "Activités" },
+  { src: tirArc2, alt: "Élève du collège privé visant une cible lors d'un atelier de tir à l'arc", caption: "Atelier tir à l'arc", category: "Activités" },
+  { src: sortiePoney, alt: "Élèves en balade à cheval et calèche lors d'une sortie pédagogique, école privée Sidi Maârouf et Bouskoura", caption: "Sortie pédagogique à la ferme", category: "Sorties" },
+  { src: jardinageArrosage, alt: "Collégiennes du collège privé arrosant une jeune plantation dans le jardin de l'école, secteur Bouskoura", caption: "Atelier jardinage", category: "Environnement" },
+  { src: jardinagePlantation, alt: "Élève de primaire plantant dans le potager pédagogique de l'école privée, Sidi Maârouf", caption: "Potager pédagogique", category: "Environnement" },
+  { src: courMaternelle, alt: "Cour de récréation de la maternelle privée à Sidi Maârouf avec structures de jeux", category: "Maternelle", caption: "Cour de la maternelle" },
+  { src: parcoursMotricite1, alt: "Enfants de la maternelle privée en parcours de motricité, Casablanca", caption: "Parcours de motricité", category: "Maternelle" },
+  { src: parcoursMotricite2, alt: "Groupe d'enfants de la maternelle privée en parcours d'obstacles, Sidi Maârouf", caption: "Éveil moteur en groupe", category: "Maternelle" },
+  { src: sportFoot, alt: "Collégiens du collège privé en séance de football encadrée, Sidi Maârouf", caption: "Séance de football", category: "Sport" },
+  { src: sportCollege, alt: "Élèves du collège privé en match de handball, Casablanca", caption: "Match de handball", category: "Sport" },
+  { src: jeuPedagogique, alt: "Jeu pédagogique interactif sur scène avec les élèves du collège privé, secteur Bouskoura", caption: "Jeu pédagogique sur scène", category: "Pédagogie" },
+  { src: spectacleScolaire, alt: "Élèves de l'école privée Al Oumrane sur scène lors d'un spectacle, vie scolaire à Sidi Maârouf", caption: "Spectacle scolaire", category: "Vie scolaire" },
+  { src: evenementEquipe, alt: "Équipe pédagogique de l'école privée Al Oumrane réunie pour les 25 ans de l'établissement, Sidi Maârouf", caption: "25 ans du Groupe Scolaire Al Oumrane", category: "Vie scolaire" },
 ];
 
 

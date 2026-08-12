@@ -37,7 +37,7 @@ function Lycee() {
         title="Lycée & Baccalauréat"
         intro="Au lycée, chaque étape compte. Notre accompagnement vise à aider les élèves à consolider leurs acquis, développer leur autonomie et aborder les épreuves du Baccalauréat avec méthode et confiance."
         image={cycle.image}
-        imageAlt="Lycéens du Groupe Scolaire Al Oumrane en préparation du Baccalauréat"
+        imageAlt="Lycée privé à Sidi Maârouf, Casablanca — lycéens en préparation du Baccalauréat"
         actions={
           <>
             <CtaLink to="/demande-visite" variant="solid">

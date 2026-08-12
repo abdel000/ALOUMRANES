@@ -33,7 +33,7 @@ function VieScolaire() {
         title="Une vie scolaire qui dépasse la salle de classe."
         intro="Apprendre, créer, partager, explorer. La vie scolaire complète les apprentissages et participe au développement de la confiance et de l'esprit collectif."
         image={IMAGES.lycee}
-        imageAlt="Élèves du Groupe Scolaire Al Oumrane dans un espace de travail"
+        imageAlt="Vie scolaire de l'école privée Al Oumrane à Sidi Maârouf, Casablanca"
       />
 
       <section className="py-20 lg:py-28">

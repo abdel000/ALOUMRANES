@@ -33,7 +33,7 @@ function Pedagogie() {
         title="Observer. Comprendre. Accompagner. Faire progresser."
         intro="Notre pédagogie s'appuie sur un suivi attentif : comprendre le profil de chaque élève pour adapter l'accompagnement et installer des méthodes de travail durables."
         image={IMAGES.philosophy}
-        imageAlt="Enseignante accompagnant une élève pendant un exercice"
+        imageAlt="Pédagogie de l'école privée Al Oumrane à Sidi Maârouf — enseignante accompagnant une élève"
       />
 
       <section className="py-20 lg:py-28">
@@ -80,7 +80,7 @@ function Pedagogie() {
           <Reveal className="overflow-hidden">
             <img
               src={IMAGES.college}
-              alt="Élèves travaillant en groupe avec leur enseignante"
+              alt="Élèves travaillant en groupe avec leur enseignante, école privée Sidi Maârouf"
               loading="lazy"
               className="aspect-4/3 w-full object-cover"
             />

@@ -33,7 +33,7 @@ function Visite() {
         title="Venez découvrir l'école."
         intro="Une visite est souvent le meilleur moyen de se projeter. Choisissez un créneau et rencontrez notre équipe pédagogique."
         image={IMAGES.campus}
-        imageAlt="Entrée et espaces extérieurs du Groupe Scolaire Al Oumrane"
+        imageAlt="Entrée et espaces extérieurs de l'école privée Al Oumrane à Sidi Maârouf, Casablanca"
       />
 
       <section className="py-20 lg:py-28">

@@ -32,7 +32,7 @@ function Activites() {
         title="Des activités parascolaires diversifiées"
         intro="Les activités parascolaires complètent les apprentissages : elles développent les talents, la confiance en soi et le goût du travail collectif."
         image={IMAGES.activites}
-        imageAlt="Élèves sur scène lors d'un spectacle scolaire"
+        imageAlt="Activités parascolaires du collège privé à Sidi Maârouf — spectacle scolaire"
       />
 
       <section className="py-20 lg:py-28">

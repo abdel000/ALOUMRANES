@@ -54,7 +54,7 @@ function Admissions() {
       <section className="relative">
         <img
           src={IMAGES.campus}
-          alt="Établissement Groupe Scolaire Al Oumrane à Sidi Maârouf, Casablanca"
+          alt="École privée à Sidi Maârouf, Casablanca — campus du Groupe Scolaire Al Oumrane, de la maternelle au lycée"
           width={1920}
           height={1000}
           className="h-[88dvh] w-full object-cover"
@@ -139,7 +139,7 @@ function Admissions() {
           <Reveal className="overflow-hidden">
             <img
               src={IMAGES.philosophy}
-              alt="Accompagnement personnalisé d'une élève par son enseignante"
+              alt="Accompagnement personnalisé d'une élève par son enseignante, école privée Sidi Maârouf"
               loading="lazy"
               className="aspect-4/5 w-full object-cover"
             />

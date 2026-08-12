@@ -99,7 +99,7 @@ function InscriptionsLanding() {
       <section className="bg-hero-gradient relative overflow-hidden text-white">
         <img
           src={IMAGES.heroBuilding}
-          alt="Bâtiment du Groupe Scolaire Al Oumrane à Sidi Maârouf, Casablanca"
+          alt="École privée à Sidi Maârouf, Casablanca — bâtiment du Groupe Scolaire Al Oumrane, du maternelle au lycée"
           className="absolute inset-0 size-full object-contain sm:object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-black/5 to-black/35" />
@@ -202,19 +202,19 @@ function InscriptionsLanding() {
             {[
               {
                 image: IMAGES.trilingue,
-                alt: "Élèves en atelier créatif au Groupe Scolaire Al Oumrane",
+                alt: "Élèves en atelier créatif, école trilingue privée à Sidi Maârouf",
                 title: "École trilingue",
                 text: "Arabe, français et anglais dès le plus jeune âge pour une vraie ouverture sur le monde.",
               },
               {
                 image: IMAGES.activitesParascolaires,
-                alt: "Élève s'entraînant au tir à l'arc lors d'une activité parascolaire",
+                alt: "Élève du collège privé s'entraînant au tir à l'arc lors d'une activité parascolaire",
                 title: "Activités parascolaires",
                 text: "Sport, tir à l'arc, arts et projets collectifs pour révéler chaque talent.",
               },
               {
                 image: IMAGES.ferme,
-                alt: "Élève plantant dans un carré potager décoré par les enfants",
+                alt: "Élève de primaire plantant dans le potager pédagogique, école privée Sidi Maârouf",
                 title: "Ferme pédagogique",
                 text: "Jardinage et potager : contact avec la nature et l'apprentissage en plein air.",
               },
@@ -240,7 +240,7 @@ function InscriptionsLanding() {
       <section className="relative overflow-hidden">
         <img
           src={IMAGES.campus}
-          alt="Façade du Groupe Scolaire Al Oumrane à Sidi Maârouf, Casablanca"
+          alt="École privée à Sidi Maârouf, Casablanca — campus du Groupe Scolaire Al Oumrane, desservant aussi Bouskoura"
           loading="lazy"
           className="h-[50vh] w-full object-cover sm:h-[60vh]"
         />
@@ -279,13 +279,13 @@ function InscriptionsLanding() {
             {[
               {
                 image: IMAGES.galleryTeam,
-                alt: "Équipe pédagogique et administrative réunie pour les 25 ans du Groupe Scolaire Al Oumrane",
+                alt: "Équipe pédagogique de l'école privée Al Oumrane réunie pour les 25 ans de l'établissement, Sidi Maârouf",
                 title: "Une équipe engagée",
                 text: "25 ans d'expérience au service de la réussite et de l'épanouissement de chaque élève.",
               },
               {
                 image: IMAGES.galleryJeuPedagogique,
-                alt: "Jeu pédagogique interactif sur scène avec les élèves du collège",
+                alt: "Jeu pédagogique interactif sur scène avec les élèves du collège privé, secteur Bouskoura",
                 title: "Apprentissage actif",
                 text: "Des activités pédagogiques vivantes, sur scène et en classe, qui donnent envie d'apprendre.",
               },
@@ -315,14 +315,14 @@ function InscriptionsLanding() {
           </h2>
           <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4">
             {[
-              { src: IMAGES.gallerySport, alt: "Séance de football encadrée sur le terrain de sport" },
-              { src: IMAGES.galleryPool, alt: "Élèves en cours de natation dans la piscine de l'école" },
-              { src: IMAGES.galleryLibrary, alt: "Bibliothèque de l'école" },
-              { src: IMAGES.galleryPlayground, alt: "Aire de jeux de la maternelle" },
-              { src: IMAGES.galleryGardening, alt: "Atelier de jardinage pédagogique" },
-              { src: IMAGES.galleryGroupWork, alt: "Travail en petits groupes en classe" },
-              { src: IMAGES.galleryMotricite, alt: "Parcours de motricité pour les plus jeunes" },
-              { src: IMAGES.galleryTeam, alt: "Équipe pédagogique du Groupe Scolaire Al Oumrane" },
+              { src: IMAGES.gallerySport, alt: "Séance de football au collège privé de Sidi Maârouf" },
+              { src: IMAGES.galleryPool, alt: "Cours de natation à l'école privée Al Oumrane, Casablanca" },
+              { src: IMAGES.galleryLibrary, alt: "Bibliothèque du lycée privé Al Oumrane" },
+              { src: IMAGES.galleryPlayground, alt: "Aire de jeux de la maternelle privée, Casablanca" },
+              { src: IMAGES.galleryGardening, alt: "Atelier de jardinage pédagogique, école privée Bouskoura" },
+              { src: IMAGES.galleryGroupWork, alt: "Travail en petits groupes, école primaire privée Sidi Maârouf" },
+              { src: IMAGES.galleryMotricite, alt: "Parcours de motricité pour les plus jeunes, maternelle privée" },
+              { src: IMAGES.galleryTeam, alt: "Équipe pédagogique de l'école privée Al Oumrane, Sidi Maârouf" },
             ].map((g, i) => (
               <img
                 key={i}

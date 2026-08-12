@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import * as Icons from "lucide-react";
-const heroImage = "/images/gmb-03.jpg";
+const heroImage = "/images/ecole-privee-sidi-maarouf-casablanca-facade.jpg";
 import { absoluteUrl, SITE, track } from "@/lib/site";
 import { CYCLES, IMAGES, SUPPORT_STEPS, TESTIMONIALS, TRUST_POINTS, WHY } from "@/content/school";
 import { CtaLink, TextLink } from "@/components/site/Cta";
@@ -43,7 +43,7 @@ function Home() {
         <div className="absolute inset-0">
           <img
             src={heroImage}
-            alt="Façade du Groupe Scolaire Al Oumrane à Sidi Maârouf, Casablanca"
+            alt="École privée à Sidi Maârouf, Casablanca — façade du Groupe Scolaire Al Oumrane, de la maternelle au lycée"
 
             width={1920}
             height={1200}
@@ -110,7 +110,7 @@ function Home() {
           <Reveal className="overflow-hidden">
             <img
               src={IMAGES.philosophyHome}
-              alt="Élève plantant dans le potager pédagogique de l'école"
+              alt="Élève plantant dans le potager pédagogique, école primaire privée à Sidi Maârouf"
               loading="lazy"
               width={1200}
               height={1504}
@@ -211,7 +211,7 @@ function Home() {
           <Reveal className="overflow-hidden">
             <img
               src={IMAGES.bac}
-              alt="Lycéens en cours, préparation aux épreuves du Baccalauréat"
+              alt="Lycéens en cours au lycée privé de Sidi Maârouf, préparation au Baccalauréat"
               loading="lazy"
               width={1600}
               height={1008}
@@ -262,7 +262,7 @@ function Home() {
       <section className="relative">
         <img
           src={IMAGES.campus}
-          alt="Espaces extérieurs et bâtiments du Groupe Scolaire Al Oumrane"
+          alt="Espaces extérieurs de l'école privée Al Oumrane à Sidi Maârouf, Casablanca"
           loading="lazy"
           width={1920}
           height={1000}

@@ -34,7 +34,7 @@ function NotreEcole() {
         title="Un environnement pour grandir et réussir."
         intro="Groupe Scolaire Al Oumrane accueille les élèves de la maternelle au lycée à Sidi Maârouf, Casablanca, dans un cadre structuré où l'exigence académique et l'accompagnement humain avancent ensemble."
         image={IMAGES.campus}
-        imageAlt="Bâtiments et espaces extérieurs du Groupe Scolaire Al Oumrane"
+        imageAlt="École privée à Sidi Maârouf, Casablanca — bâtiments et espaces extérieurs du Groupe Scolaire Al Oumrane"
         actions={
           <>
             <CtaLink to="/demande-visite" variant="solid">
@@ -78,7 +78,7 @@ function NotreEcole() {
       <section className="relative">
         <img
           src={IMAGES.primaire}
-          alt="Salle de classe lumineuse du Groupe Scolaire Al Oumrane"
+          alt="Salle de classe de l'école privée Al Oumrane à Sidi Maârouf, Casablanca"
           loading="lazy"
           className="h-[55vh] w-full object-cover"
         />

@@ -32,7 +32,7 @@ function Actualites() {
         title="Les temps forts de l'école."
         intro="Retrouvez ici les actualités, événements et informations pratiques publiés par l'établissement."
         image={IMAGES.campus}
-        imageAlt="Espaces extérieurs du Groupe Scolaire Al Oumrane"
+        imageAlt="Actualités de l'école privée Al Oumrane à Sidi Maârouf, Casablanca"
       />
 
       <section className="py-20 lg:py-28">
