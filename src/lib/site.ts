@@ -14,8 +14,7 @@ export const SITE = {
   address: "Lotissement Salma, Route de Sidi Maârouf, 20280 Casablanca, Maroc",
   phone: "05 22 97 25 24",
   phoneHref: "tel:+212522972524",
-  /** TODO: remplacer par le numéro WhatsApp officiel de l'établissement. */
-  whatsapp: "",
+  whatsapp: "212779457992",
   /** TODO: adresse email à confirmer par l'établissement. */
   email: "",
   mapsLink: "https://maps.app.goo.gl/B6jdh432VJTwhxBT7",
