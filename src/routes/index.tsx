@@ -41,8 +41,8 @@ function Home() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src={IMAGES.heroEntrance}
-            alt="Entrée principale de l'école privée Al Oumrane à Sidi Maârouf, Casablanca"
+            src={IMAGES.primaire}
+            alt="Travail en petits groupes en classe de l'école primaire privée à Sidi Maârouf"
             width={1920}
             height={1200}
             className="size-full object-cover"
