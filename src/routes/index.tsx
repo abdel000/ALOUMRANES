@@ -56,7 +56,7 @@ function Home() {
             <span className="inline-flex items-center gap-2 bg-gold px-4 py-2.5 text-xs font-bold tracking-[0.2em] uppercase text-gold-foreground shadow-lg shadow-gold/30">
               Inscriptions {SITE.schoolYear} ouvertes
             </span>
-            <h1 className="mt-7 font-sans text-5xl leading-[1.05] font-bold tracking-tight text-balance [text-shadow:0_6px_30px_rgba(0,0,0,0.65)] sm:text-6xl lg:text-[4.75rem]">
+            <h1 className="mt-7 font-sans text-4xl leading-[1.08] font-semibold tracking-tight text-balance [text-shadow:0_6px_30px_rgba(0,0,0,0.65)] sm:text-5xl lg:text-[4rem]">
               L'excellence scolaire, dans un environnement pensé pour réussir.
             </h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed font-medium text-navy-foreground/90 sm:text-lg">
