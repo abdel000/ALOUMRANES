@@ -41,14 +41,12 @@ function Home() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src={IMAGES.heroBuilding}
-            alt="École privée à Sidi Maârouf, Casablanca — bâtiment du Groupe Scolaire Al Oumrane, de la maternelle au lycée"
+            src={IMAGES.heroEntrance}
+            alt="Entrée principale de l'école privée Al Oumrane à Sidi Maârouf, Casablanca"
             width={1920}
             height={1200}
             className="size-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-ink from-10% via-ink/75 via-55% to-ink/45" />
-          <div className="absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/45 via-60% to-transparent" />
           <div className="absolute -left-32 bottom-0 size-[36rem] rounded-full bg-gold/20 blur-3xl" aria-hidden="true" />
         </div>
 

@@ -355,6 +355,7 @@ export const IMAGES = {
   activites: spectacleScolaire,
   philosophyHome: jardinagePlantation,
   heroBuilding: facadeFisheye,
+  heroEntrance: facade1,
   ferme: jardinagePlantation,
   activitesParascolaires: tirArc1,
   trilingue: ateliersCreatifs,
