@@ -14,7 +14,7 @@ function Wordmark() {
         alt={`Logo ${SITE.name}`}
         width={96}
         height={96}
-        className="size-16 shrink-0 object-contain sm:size-20"
+        className="size-20 shrink-0 object-contain sm:size-24"
       />
     </Link>
   );
@@ -76,7 +76,7 @@ export function Header() {
       <div
         className={cn(
           "mx-auto flex max-w-[88rem] items-center justify-between gap-6 px-5 transition-all duration-500 sm:px-8",
-          scrolled ? "h-24" : "h-28 lg:h-32",
+          scrolled ? "h-28" : "h-32 lg:h-36",
         )}
       >
         <Wordmark />
