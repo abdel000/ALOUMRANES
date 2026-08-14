@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import * as Icons from "lucide-react";
-const heroImage = "/images/ecole-privee-sidi-maarouf-casablanca-facade.jpg";
 import { absoluteUrl, SITE, track } from "@/lib/site";
 import { CYCLES, IMAGES, SUPPORT_STEPS, TESTIMONIALS, TRUST_POINTS, WHY } from "@/content/school";
 import { CtaLink, TextLink } from "@/components/site/Cta";
@@ -42,9 +41,8 @@ function Home() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src={heroImage}
-            alt="École privée à Sidi Maârouf, Casablanca — façade du Groupe Scolaire Al Oumrane, de la maternelle au lycée"
-
+            src={IMAGES.heroBuilding}
+            alt="École privée à Sidi Maârouf, Casablanca — bâtiment du Groupe Scolaire Al Oumrane, de la maternelle au lycée"
             width={1920}
             height={1200}
             className="size-full object-cover"
@@ -59,7 +57,7 @@ function Home() {
             <span className="inline-flex items-center gap-2 bg-gold px-4 py-2.5 text-xs font-bold tracking-[0.2em] uppercase text-gold-foreground shadow-lg shadow-gold/30">
               Inscriptions {SITE.schoolYear} ouvertes
             </span>
-            <h1 className="mt-7 font-sans text-5xl leading-[1.03] font-extrabold tracking-tight text-balance [text-shadow:0_6px_30px_rgba(0,0,0,0.65)] sm:text-6xl lg:text-[4.75rem]">
+            <h1 className="mt-7 font-sans text-5xl leading-[1.05] font-bold tracking-tight text-balance [text-shadow:0_6px_30px_rgba(0,0,0,0.65)] sm:text-6xl lg:text-[4.75rem]">
               L'excellence scolaire, dans un environnement pensé pour réussir.
             </h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed font-medium text-navy-foreground/90 sm:text-lg">
