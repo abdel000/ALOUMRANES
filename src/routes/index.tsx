@@ -39,7 +39,7 @@ function Home() {
   return (
     <>
       {/* HERO */}
-      <section className="relative">
+      <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={heroImage}
