@@ -64,6 +64,7 @@ export function Header() {
   }, [open]);
 
   return (
+    <>
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 border-b backdrop-blur-xl transition-all duration-500",
@@ -120,9 +121,10 @@ export function Header() {
           </button>
         </div>
       </div>
+    </header>
 
       {open ? (
-        <div className="fixed inset-0 z-50 flex flex-col bg-navy px-6 py-6 text-navy-foreground lg:hidden">
+        <div className="fixed inset-0 z-50 flex flex-col overflow-y-auto bg-navy px-6 py-6 text-navy-foreground lg:hidden">
           <div className="flex items-center justify-between">
             <Wordmark />
             <button
@@ -161,6 +163,6 @@ export function Header() {
           </div>
         </div>
       ) : null}
-    </header>
+    </>
   );
 }
