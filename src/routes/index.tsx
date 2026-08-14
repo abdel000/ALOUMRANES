@@ -47,6 +47,7 @@ function Home() {
             height={1200}
             className="size-full object-cover"
           />
+          <div className="absolute inset-0 bg-gradient-to-t from-ink from-0% via-ink/70 via-30% to-transparent to-58%" />
           <div className="absolute -left-32 bottom-0 size-[36rem] rounded-full bg-gold/20 blur-3xl" aria-hidden="true" />
         </div>
 
