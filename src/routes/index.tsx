@@ -49,35 +49,41 @@ function Home() {
             height={1200}
             className="size-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-ink/95 via-ink/45 to-ink/70" />
+          <div className="absolute inset-0 bg-gradient-to-t from-ink from-10% via-ink/75 via-55% to-ink/45" />
+          <div className="absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/45 via-60% to-transparent" />
           <div className="absolute -left-32 bottom-0 size-[36rem] rounded-full bg-gold/20 blur-3xl" aria-hidden="true" />
         </div>
 
         <div className="relative mx-auto flex min-h-[92dvh] max-w-[88rem] flex-col justify-end px-5 pt-32 pb-16 sm:px-8 lg:pb-24">
           <div className="max-w-3xl text-navy-foreground">
-            <span className="inline-flex items-center gap-2 bg-gold px-4 py-2 text-[0.625rem] font-bold tracking-[0.2em] uppercase text-gold-foreground shadow-lg shadow-gold/30">
+            <span className="inline-flex items-center gap-2 bg-gold px-4 py-2.5 text-xs font-bold tracking-[0.2em] uppercase text-gold-foreground shadow-lg shadow-gold/30">
               Inscriptions {SITE.schoolYear} ouvertes
             </span>
-            <h1 className="mt-8 text-4xl leading-[1.06] [text-shadow:0_4px_24px_rgba(0,0,0,0.5)] sm:text-5xl lg:text-[4.25rem]">
+            <h1 className="mt-7 font-sans text-5xl leading-[1.03] font-extrabold tracking-tight text-balance [text-shadow:0_6px_30px_rgba(0,0,0,0.65)] sm:text-6xl lg:text-[4.75rem]">
               L'excellence scolaire, dans un environnement pensé pour réussir.
             </h1>
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-navy-foreground/80 sm:text-lg">
+            <p className="mt-6 max-w-xl text-base leading-relaxed font-medium text-navy-foreground/90 sm:text-lg">
               De la maternelle au lycée, Groupe Scolaire Al Oumrane accompagne chaque élève avec
               exigence, bienveillance et un suivi personnalisé.
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
-              <CtaLink to="/notre-ecole" variant="gold">
+              <CtaLink
+                to="/notre-ecole"
+                variant="gold"
+                className="px-7 py-4 text-sm shadow-xl shadow-gold/20"
+              >
                 Découvrir l'école
               </CtaLink>
               <CtaLink
                 to="/demande-visite"
                 variant="ghostLight"
+                className="px-7 py-4 text-sm"
                 onClick={() => track("visit_request", { location: "hero" })}
               >
                 Prendre rendez-vous
               </CtaLink>
             </div>
-            <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-xs tracking-[0.18em] uppercase text-navy-foreground/70">
+            <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-xs tracking-[0.18em] uppercase text-navy-foreground/80">
               <span className="inline-flex items-center gap-2">
                 <Icons.MapPin className="size-3.5 text-gold" aria-hidden="true" />
                 {SITE.district} • {SITE.city}
