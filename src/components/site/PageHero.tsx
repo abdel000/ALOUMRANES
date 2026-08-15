@@ -20,7 +20,7 @@ export function PageHero({
   actions?: ReactNode;
 }) {
   return (
-    <section className="bg-ivory pt-28 lg:pt-36">
+    <section className="bg-ivory pt-32 lg:pt-40">
       <div className="mx-auto max-w-[88rem] px-5 pb-16 sm:px-8 lg:pb-24">
         <div className="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
           <div>
