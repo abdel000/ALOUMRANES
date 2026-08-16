@@ -133,7 +133,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           },
           hasMap: SITE.mapsLink,
           areaServed: "Casablanca",
-
+          sameAs: [SITE.facebook, SITE.instagram],
         }),
       },
     ],

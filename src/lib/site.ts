@@ -20,9 +20,8 @@ export const SITE = {
   mapsLink: "https://maps.app.goo.gl/B6jdh432VJTwhxBT7",
   mapsEmbed:
     "https://www.google.com/maps?q=33.513974,-7.650375&z=16&output=embed",
-  /** TODO: liens réseaux sociaux officiels. */
-  instagram: "",
-  facebook: "",
+  instagram: "https://www.instagram.com/gs_aloumrane/",
+  facebook: "https://web.facebook.com/profile.php?id=61580082068794",
   hours: "Lundi au vendredi : 08h00 – 18h00 • Samedi et dimanche : fermé",
   /** Note Google de l'établissement (fiche Google Business). */
   rating: 4.3,
