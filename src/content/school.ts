@@ -127,6 +127,44 @@ export const CYCLES: Cycle[] = [
   },
 ];
 
+export type ChoiceCriterion = { title: string; text: string };
+
+/**
+ * Critères de choix d'une école privée, rédigés comme un guide neutre pour les
+ * parents. Chaque critère ne cite un fait Al Oumrane que s'il est déjà publié
+ * ailleurs sur le site (aucune statistique inventée).
+ */
+export const CHOICE_CRITERIA: ChoiceCriterion[] = [
+  {
+    title: "La continuité pédagogique, de la maternelle au lycée",
+    text: "Changer d'établissement en cours de scolarité peut fragiliser les repères d'un enfant. Vérifiez si l'école propose un parcours complet, sans rupture entre les cycles. Le Groupe Scolaire Al Oumrane accompagne les élèves de la maternelle au lycée au sein du même établissement, à Sidi Maârouf.",
+  },
+  {
+    title: "Les langues d'enseignement",
+    text: "L'apprentissage des langues dès le plus jeune âge est un critère central pour de nombreuses familles à Casablanca. Renseignez-vous sur les langues enseignées et sur leur place dans le programme. Le Groupe Scolaire Al Oumrane propose un enseignement trilingue (arabe, français, anglais).",
+  },
+  {
+    title: "Les résultats aux examens, notamment le Baccalauréat",
+    text: "Les résultats officiels communiqués par l'établissement restent l'indicateur le plus objectif de la qualité de la préparation aux examens. Tous les candidats du Groupe Scolaire Al Oumrane à la session 2026 du Baccalauréat ont été reçus.",
+  },
+  {
+    title: "L'accompagnement et le suivi individualisé",
+    text: "Un bon encadrement pédagogique passe par l'identification des besoins de chaque élève, un suivi régulier des progrès et une communication claire avec les familles. C'est l'approche du Groupe Scolaire Al Oumrane, structurée en quatre temps : identifier, accompagner, suivre, préparer.",
+  },
+  {
+    title: "Les activités parascolaires et la vie scolaire",
+    text: "Au-delà des salles de classe, les activités proposées participent à l'épanouissement de l'enfant. Le Groupe Scolaire Al Oumrane propose notamment des cours de natation en piscine intégrée, des ateliers créatifs, du tir à l'arc, du jardinage pédagogique et des sorties pédagogiques régulières.",
+  },
+  {
+    title: "La localisation et le transport scolaire",
+    text: "Pour les familles de Sidi Maârouf, de Bouskoura ou des quartiers voisins, la proximité et l'organisation du transport au quotidien sont déterminantes. Le Groupe Scolaire Al Oumrane est situé à Sidi Maârouf et assure le ramassage scolaire par bus dans le secteur.",
+  },
+  {
+    title: "L'expérience de l'établissement et les avis des familles",
+    text: "L'ancienneté d'une école et les retours des parents déjà inscrits donnent une idée concrète du quotidien qui vous attend. Le Groupe Scolaire Al Oumrane accompagne des familles casablancaises depuis près de 25 ans et affiche une note de 4,3/5 sur 64 avis Google.",
+  },
+];
+
 export const TRUST_POINTS = [
   "Maternelle → Lycée",
   "Accompagnement personnalisé",

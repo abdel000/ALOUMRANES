@@ -10,6 +10,7 @@ const navLinks = [
   { label: "Pédagogie", to: "/pedagogie" },
   { label: "Cycles", to: "/primaire" },
   { label: "Vie Scolaire", to: "/vie-scolaire" },
+  { label: "Comment choisir son école", to: "/comment-choisir-ecole-privee-sidi-maarouf" },
   { label: "Admissions", to: "/admissions" },
   { label: "Contact", to: "/contact" },
 ];
