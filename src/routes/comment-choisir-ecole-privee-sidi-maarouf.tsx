@@ -11,18 +11,19 @@ import { CheckCircle2 } from "lucide-react";
 const title = "Comment choisir une école privée à Sidi Maârouf ? | Al Oumrane";
 const description =
   "Les critères essentiels pour choisir une école privée à Sidi Maârouf, Casablanca : pédagogie, langues, résultats au Bac, activités et transport scolaire.";
-const path = "/comment-choisir-ecole-privee-sidi-maarouf";
 
-export const Route = createFileRoute(path)({
+export const Route = createFileRoute("/comment-choisir-ecole-privee-sidi-maarouf")({
   head: () => ({
     meta: [
       { title },
       { name: "description", content: description },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
-      { property: "og:url", content: absoluteUrl(path) },
+      { property: "og:url", content: absoluteUrl("/comment-choisir-ecole-privee-sidi-maarouf") },
     ],
-    links: [{ rel: "canonical", href: absoluteUrl(path) }],
+    links: [
+      { rel: "canonical", href: absoluteUrl("/comment-choisir-ecole-privee-sidi-maarouf") },
+    ],
     scripts: [
       {
         type: "application/ld+json",
@@ -34,7 +35,7 @@ export const Route = createFileRoute(path)({
           image: DEFAULT_OG_IMAGE,
           datePublished: "2026-08-16",
           dateModified: "2026-08-16",
-          mainEntityOfPage: absoluteUrl(path),
+          mainEntityOfPage: absoluteUrl("/comment-choisir-ecole-privee-sidi-maarouf"),
           author: { "@type": "Organization", name: SITE.name, url: SITE_URL },
           publisher: {
             "@type": "Organization",
