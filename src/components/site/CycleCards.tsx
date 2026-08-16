@@ -1,5 +1,4 @@
-import { Link } from "@tanstack/react-router";
-import { ArrowRight, Baby, Backpack, BookOpen, GraduationCap } from "lucide-react";
+import { Baby, Backpack, BookOpen, GraduationCap } from "lucide-react";
 import { CYCLES } from "@/content/school";
 import { Reveal } from "./Reveal";
 
@@ -29,13 +28,6 @@ export function CycleCards() {
               <h3 className="text-2xl">{c.title}</h3>
             </div>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{c.description}</p>
-            <Link
-              to={c.to}
-              className="group mt-5 inline-flex items-center gap-2 text-xs tracking-[0.16em] uppercase text-navy transition-colors hover:text-gold"
-            >
-              Découvrir
-              <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1.5" />
-            </Link>
           </Reveal>
         );
       })}
