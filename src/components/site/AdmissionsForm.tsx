@@ -3,7 +3,8 @@ import { useNavigate } from "@tanstack/react-router";
 import { toast } from "sonner";
 import { z } from "zod";
 import { ArrowRight, ChevronDown, Clock3, ShieldCheck, Star } from "lucide-react";
-import { SITE, getUtm, track } from "@/lib/site";
+import { SITE, getCookie, getUtm, track, trackMetaLead } from "@/lib/site";
+import { sendLeadToMeta } from "@/lib/meta-capi";
 import { cn } from "@/lib/utils";
 import { CtaButton } from "./Cta";
 
@@ -125,6 +126,21 @@ export function AdmissionsForm({
     track("form_submit", { request_type: lead.request_type, student_level: lead.student_level });
     track("admission_inquiry", { student_level: lead.student_level });
     if (lead.request_type === "Planifier une visite") track("visit_request", {});
+
+    // Meta: fire the browser Pixel "Lead" event and the server-side Conversions API
+    // event with the same eventId, so Meta deduplicates them into a single conversion.
+    const metaEventId = crypto.randomUUID();
+    trackMetaLead(metaEventId, { request_type: lead.request_type, student_level: lead.student_level });
+    sendLeadToMeta({
+      data: {
+        eventId: metaEventId,
+        eventSourceUrl: window.location.href,
+        name: lead.name,
+        phone: lead.phone,
+        fbp: getCookie("_fbp"),
+        fbc: getCookie("_fbc"),
+      },
+    }).catch((error: unknown) => console.error("[meta-capi] client call failed", error));
 
     const formEl = e.currentTarget;
     const webhookUrl = import.meta.env.VITE_LEADS_WEBHOOK_URL as string | undefined;

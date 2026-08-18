@@ -69,6 +69,24 @@ export function track(event: TrackEvent, params: Record<string, unknown> = {}) {
   w.fbq?.("trackCustom", event, params);
 }
 
+/**
+ * Fires the Meta Pixel's standard "Lead" event with an explicit eventID, so Meta
+ * can deduplicate it against the matching server-side Conversions API event sent
+ * for the same submission (see src/lib/meta-capi.ts).
+ */
+export function trackMetaLead(eventId: string, params: Record<string, unknown> = {}) {
+  if (typeof window === "undefined") return;
+  const w = window as unknown as { fbq?: (...args: unknown[]) => void };
+  w.fbq?.("track", "Lead", params, { eventID: eventId });
+}
+
+/** Reads a browser cookie by name (used for Meta's _fbp / _fbc match-quality cookies). */
+export function getCookie(name: string): string | undefined {
+  if (typeof document === "undefined") return undefined;
+  const match = document.cookie.match(new RegExp(`(?:^|; )${name}=([^;]*)`));
+  return match?.[1] !== undefined ? decodeURIComponent(match[1]) : undefined;
+}
+
 export function getUtm() {
   if (typeof window === "undefined") return { utm_source: "", utm_medium: "", utm_campaign: "" };
   const p = new URLSearchParams(window.location.search);
