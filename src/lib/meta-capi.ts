@@ -55,6 +55,12 @@ export const sendLeadToMeta = createServerFn({ method: "POST" })
     if (data.fbp) userData.fbp = data.fbp;
     if (data.fbc) userData.fbc = data.fbc;
 
+    // Optional: tags events so they show up instantly in Events Manager's "Test Events"
+    // tab instead of the normal stream (which can take hours to reflect in reporting).
+    // Remove META_TEST_EVENT_CODE from the environment once verified — test-tagged
+    // events don't count toward real ad optimization/attribution.
+    const testEventCode = process.env["META_TEST_EVENT_CODE"];
+
     try {
       const res = await fetch(`https://graph.facebook.com/v21.0/${pixelId}/events`, {
         method: "POST",
@@ -70,6 +76,7 @@ export const sendLeadToMeta = createServerFn({ method: "POST" })
               user_data: userData,
             },
           ],
+          ...(testEventCode ? { test_event_code: testEventCode } : {}),
           access_token: accessToken,
         }),
       });
