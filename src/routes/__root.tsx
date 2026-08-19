@@ -146,6 +146,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 const GTM_ID = "GTM-WDBRJG3M";
 const GOOGLE_ADS_ID = "AW-10786699280";
+const GOOGLE_ADS_ID_2 = "AW-18397459584";
 /** Same ID as the server-side META_PIXEL_ID env var — not a secret, safe to hardcode client-side (Meta expects this in page source). */
 const META_PIXEL_ID = "1056844190666625";
 
@@ -161,7 +162,7 @@ function RootShell({ children }: { children: ReactNode }) {
         <script async src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`} />
         <script
           dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', '${GOOGLE_ADS_ID}');`,
+            __html: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', '${GOOGLE_ADS_ID}');gtag('config', '${GOOGLE_ADS_ID_2}');`,
           }}
         />
         <script
